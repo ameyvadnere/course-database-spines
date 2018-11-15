@@ -1,0 +1,120 @@
+<html>
+<head>
+  <title>Course Database & Spines</title>
+ <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+  <style>
+  .con{
+    align-content: center;
+    border: 1px solid black;
+    background-color: #C484EF;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    /*max-width: 50%;*/
+    width: 500px;
+    height: 50px;
+    transition: width 0.7s;
+
+  }
+  
+
+  .con:hover {
+  	width: 100%;
+}
+
+	h1 {
+
+	  font-family: "Caudex";	
+
+	}
+
+</style>
+
+<script type="text/javascript">
+	var G = new jsnx.Graph();
+G.addNodesFrom([
+    [1, {color: 'red'}],
+    [2, {color: 'green'}],
+    [3, {color: 'white'}]
+]);
+ 
+G.addEdgesFrom([[1,2], [1,3]]);
+ 
+// `jsnx.draw` accept a graph and configuration object
+jsnx.draw(G, {
+  element: '#demo-canvas',
+  withLabels: true,
+  nodeStyle: {
+      fill: function(d) {
+          return d.data.color;
+      }
+  }
+});
+</script>
+
+
+</head>
+<body>
+  <center>
+  <div class="con">
+  	<center>
+  <h1>Course Database and Spines</h1>
+  	</center>
+</div>
+</center>
+
+<br>
+<br>
+
+<svg width="100" height="100">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="orange" />
+	Sorry, SVG not supported.
+</svg>
+
+<svg width="400" height="110">
+  <rect width="300" height="100" style="fill:rgb(110,110,110);stroke-width:3;stroke:rgb(100,100,0)" />
+</svg>
+
+<br>
+<svg width="400" height="800">
+  <rect x="50" y="50" rx="20" ry="20" width="150" height="150"
+  style="fill:yellow;stroke:black;stroke-width:5;opacity:1" />
+  <line x1="125" y1="125" x2="125" y2="425" style="stroke:yellow;stroke-width:2" />
+  <rect x="50" y="350" rx="20" ry="20" width="150" height="150"
+  style="fill:yellow;stroke:black;stroke-width:5;opacity:1" />
+</svg>
+<br>
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.con{
+    width: 100px;
+    height: 100px;
+    background: red;
+   /*-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+}
+
+.con:hover {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+<div class='con'>Eminem</div>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+</html>
+-->
