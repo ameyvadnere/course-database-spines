@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<<head>
+  <style>
+    .arrow{
+      stroke:rgb(0,0,0);
+      marker-end:url(#markerArrow)
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+  	var mainlist = [];
+	var one = [];
+	one.push("first")
+	one.push("second")
+	mainlist.push(one)
+	var two = [];
+	two.push("second")
+	two.push("third")
+	mainlist.push(two)
+	var three = [];
+	three.push("third")
+	three.push("fourth")
+	mainlist.push(three)
+	var four = [];
+	four.push("fourth")
+	mainlist.push(four)
+  	function joinnodes(give)
+  	{
+  		var index = 0
+  		for(i=0;i<mainlist.length;i++)
+  		{
+  			var temp = mainlist[i];
+  			if(temp[0] == give)
+  			{
+  				index = i;
+  				break;
+  			}
+  		}
+ 		var cars = mainlist[index];
+ 		if(cars.length != 1)
+ 		{
+ 			var lineid =  cars[0] + "to" + cars[1];
+  			document.getElementById(lineid).setAttribute("stroke-width","2")
+  			joinnodes(cars[1]);
+ 		}
+  	}
+  	function removenodes(give)
+  	{
+ 		var index = 0
+  		for(i=0;i<mainlist.length;i++)
+  		{
+  			var temp = mainlist[i];
+  			if(temp[0] == give)
+  			{
+  				index = i;
+  				break;
+  			}
+  		}
+ 		var cars = mainlist[index];
+ 		if(cars.length != 1)
+ 		{
+ 			var lineid =  cars[0] + "to" + cars[1];
+  			document.getElementById(lineid).setAttribute("stroke-width","0")
+  			removenodes(cars[1]);
+ 		}
+  	}
+  </script>
+  <svg height="800" width="800">
+    <defs>
+        <marker id="markerArrow" markerWidth="50" markerHeight="50" refX="40" refY="6" orient="auto">
+            <path d="M2,2 L2,11 L10,6 L2,2" style="fill: orange;" />
+        </marker> 
+    </defs>
+    <rect onmouseover="joinnodes('second')" onmouseleave="removenodes('second')" id="second" x="50" y="50" rx="20" ry="20" width="150" height="150" style="fill:black;stroke:black;stroke-width:5;opacity:1" />
+  	
+  	<rect onmouseover="joinnodes('first')" onmouseleave="removenodes('first')" id="first" x="50" y="350" rx="20" ry="20" width="150" height="150" style="fill:black;stroke:black;stroke-width:5;opacity:1" />
+  	
+  	<rect onmouseover="joinnodes('third')" onmouseleave="removenodes('third')" id="third" x="350" y="50" rx="20" ry="20" width="150" height="150" style="fill:black;stroke:black;stroke-width:5;opacity:1" />
+    
+    <rect onmouseover="joinnodes('fourth')" onmouseleave="removenodes('fourth')" id="fourth" x="350" y="350" rx="20" ry="20" width="150" height="150" style="fill:black;stroke:black;stroke-width:5;opacity:1" />
+    <line id="firsttosecond" stroke-width="0" style="stroke:red;" x1="200" y1="125" x2="350" y2="125" class="arrow" />
+    <line id="secondtothird" stroke-width="0" style="stroke:red;" x2="125" y2="200" x1="125" y1="350" class="arrow" />
+    <line id="thirdtofourth" stroke-width="0" style="stroke:red;" x1="425" y1="200" x2="425" y2="350" class="arrow" />
+  </svg>
+</body>
+</html>
