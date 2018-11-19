@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSE</title>
+<style type="text/css">
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.arrow{
+  stroke:rgb(0,0,0);
+  marker-end:url(#markerArrow)
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}	
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var mainlist =[]
+var cs102 = []
+cs102.push("CS102")
+mainlist.push(cs102)
+
+var ma301 = []
+ma301.push("MA301")
+mainlist.push(ma301)
+
+var cs201 = []
+cs201.push("CS201")
+cs201.push("CS102")
+mainlist.push(cs201)
+
+var cs206 = []
+cs206.push("CS206")
+cs206.push("CS201")
+cs206.push("CS102")
+cs206.push("CS203")
+cs206.push("CS211")
+mainlist.push(cs206)
+
+var cs203 = []
+cs203.push("CS203")
+mainlist.push(cs203)
+
+var cs213 = []
+cs213.push("CS213")
+mainlist.push(cs213)
+
+var cs202 = []
+cs202.push("CS202")
+cs202.push("CS203")
+mainlist.push(cs202)
+
+var cs204 = []
+cs204.push("CS204")
+mainlist.push(cs204)
+
+var cs212 = []
+cs212.push("CS212")
+mainlist.push(cs212)
+
+var cs306 = []
+cs306.push("CS306")
+mainlist.push(cs306)
+
+var cs302 = []
+cs302.push("CS302")
+mainlist.push(cs302)
+
+var cs303 = []
+cs303.push("CS303")
+mainlist.push(cs303)
+
+var cs311 = []
+cs311.push("CS311")
+mainlist.push(cs311)
+
+var cs211 = []
+cs211.push("CS211")
+cs211.push("CS102")
+mainlist.push(cs211)
+
+var cs311 = []
+cs311.push("CS311")
+mainlist.push(cs311)
+
+var cs301 = []
+cs301.push("CS301")
+mainlist.push(cs301)
+
+var cs312 = []
+cs312.push("CS312")
+mainlist.push(cs312)
+
+var cs314 = []
+cs314.push("CS314")
+cs314.push("CS301")
+mainlist.push(cs314)
+
+var cs304 = []
+cs304.push("CS304")
+cs304.push("CS301")
+mainlist.push(cs304)
+function joinnodes(give)
+{
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","2")
+		joinnodes(cars[a]);
+	}
+}
+function joinnodes(give)
+{
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","2")
+		joinnodes(cars[a]);
+	}
+}
+function removenodes(give)
+{
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","2")
+		removenodes(cars[a]);
+	}
+}
+</script>
+<svg height="8000" width="8000">
+<defs>
+	<marker id="markerArrow" markerWidth="50" markerHeight="50" refX="50" refY="6" orient="auto">
+	<path d="M2,2 L2,11 L10,6 L2,2" style="fill: orange;" />
+    </marker> 
+</defs>
+<line stroke-width="2" style="stroke:red;" x1="300" y1="250" x2="250" y2="100" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="100" y1="250" x2="250" y2="100" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="600" y1="400" x2="250" y2="100" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="450" y1="100" x2="700" y2="250" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="900" y1="250" x2="750" y2="250" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="300" y1="250" x2="700" y2="250" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="300" y1="250" x2="600" y2="400" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="700" y1="550" x2="800" y2="400" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="900" y1="550" x2="800" y2="400" class="arrow" />
+
+<line stroke-width="2" style="stroke:red;" x1="300" y1="250" x2="100" y2="250" class="arrow" />
+
+<circle cx="250" cy="100" r="50" stroke="black" fill="black" />
+<text x="250" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS102 </text>
+
+<circle cx="100" cy="250" r="50" stroke="black" fill="black" />
+<text x="100" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS201 </text>
+
+<circle cx="450" cy="100" r="50" stroke="black" fill="black" />
+<text x="450" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> MA301 </text>
+
+<circle cx="650" cy="100" r="50" stroke="black" fill="black" />
+<text x="650" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS213 </text>
+
+<circle cx="300" cy="250" r="50" stroke="black" fill="black" />
+<text x="300" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS206 </text>
+
+<circle cx="700" cy="250" r="50" stroke="black" fill="black" />
+<text x="700" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS203 </text>
+
+<circle cx="900" cy="250" r="50" stroke="black" fill="black" />
+<text x="900" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS202 </text>
+
+<circle cx="850" cy="100" r="50" stroke="black" fill="black" />
+<text x="850" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS204 </text>
+
+<circle cx="1100" cy="250" r="50" stroke="black" fill="black" />
+<text x="1100" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS212 </text>
+
+<circle cx="200" cy="400" r="50" stroke="black" fill="black" />
+<text x="200" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS306 </text>
+
+<circle cx="400" cy="400" r="50" stroke="black" fill="black" />
+<text x="400" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS303 </text>
+
+<circle cx="600" cy="400" r="50" stroke="black" fill="black" />
+<text x="600" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS211 </text>
+
+<circle cx="800" cy="400" r="50" stroke="black" fill="black" />
+<text x="800" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS301 </text>
+
+<circle cx="1000" cy="400" r="50" stroke="black" fill="black" />
+<text x="1000" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS313 </text>
+
+<circle cx="300" cy="550" r="50" stroke="black" fill="black" />
+<text x="300" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS302 </text>
+
+<circle cx="500" cy="550" r="50" stroke="black" fill="black" />
+<text x="500" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS311 </text>
+
+<circle cx="700" cy="550" r="50" stroke="black" fill="black" />
+<text x="700" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS314 </text>
+
+<circle cx="900" cy="550" r="50" stroke="black" fill="black" />
+<text x="900" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS304 </text>
+
+</svg>
+</body>
+</html>
