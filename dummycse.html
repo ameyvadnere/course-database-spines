@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="lightblue">
+<head>
+<title>CSE</title>
+<style type="text/css">
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.arrow{
+  stroke:rgb(0,0,0);
+  marker-end:url(#markerArrow)
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	background-color: lightblue;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}	
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var mainlist =[]
+var cs102 = []
+cs102.push("CS102")
+mainlist.push(cs102)
+
+var ma301 = []
+ma301.push("MA301")
+ma301.push("CS203")
+mainlist.push(ma301)
+
+var cs201 = []
+cs201.push("CS201")
+cs201.push("CS102")
+mainlist.push(cs201)
+
+var cs206 = []
+cs206.push("CS206")
+cs206.push("CS201")
+cs206.push("CS102")
+cs206.push("CS203")
+cs206.push("CS211")
+mainlist.push(cs206)
+
+var cs203 = []
+cs203.push("CS203")
+mainlist.push(cs203)
+
+var cs213 = []
+cs213.push("CS213")
+mainlist.push(cs213)
+
+var cs202 = []
+cs202.push("CS202")
+cs202.push("CS203")
+mainlist.push(cs202)
+
+var cs204 = []
+cs204.push("CS204")
+mainlist.push(cs204)
+
+var cs212 = []
+cs212.push("CS212")
+mainlist.push(cs212)
+
+var cs306 = []
+cs306.push("CS306")
+mainlist.push(cs306)
+
+var cs302 = []
+cs302.push("CS302")
+mainlist.push(cs302)
+
+var cs303 = []
+cs303.push("CS303")
+mainlist.push(cs303)
+
+var cs311 = []
+cs311.push("CS311")
+mainlist.push(cs311)
+
+var cs211 = []
+cs211.push("CS211")
+cs211.push("CS102")
+mainlist.push(cs211)
+
+var cs311 = []
+cs311.push("CS311")
+mainlist.push(cs311)
+
+var cs301 = []
+cs301.push("CS301")
+mainlist.push(cs301)
+
+var cs312 = []
+cs312.push("CS312")
+mainlist.push(cs312)
+
+var cs314 = []
+cs314.push("CS314")
+cs314.push("CS301")
+mainlist.push(cs314)
+
+var cs304 = []
+cs304.push("CS304")
+cs304.push("CS301")
+mainlist.push(cs304)
+function joinnodes(give)
+{
+	document.getElementById(give).setAttribute("fill","purple")
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","2")
+		document.getElementById(cars[a]).setAttribute("fill","purple")
+		joinnodes(cars[a]);
+	}
+}
+function tjoinnodes(give1)
+{
+	give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+	document.getElementById(give).setAttribute("fill","purple")
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","2")
+		document.getElementById(cars[a]).setAttribute("fill","purple")
+		joinnodes(cars[a]);
+	}
+}
+function removenodes(give)
+{
+	document.getElementById(give).setAttribute("fill","black")
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","0")
+		document.getElementById(cars[a]).setAttribute("fill","black")
+		removenodes(cars[a]);
+	}
+}
+function tremovenodes(give1)
+{
+	give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+	document.getElementById(give).setAttribute("fill","black")
+	var index = 0
+	for(var i=0;i<mainlist.length;i++)
+	{
+		var temp = mainlist[i];
+		if(temp[0] == give)
+		{
+			index = i;
+			break;
+		}
+	}
+	var cars = mainlist[index];
+	for(var a=1;a<cars.length;a++)
+	{
+		var lineid = cars[0] + "to" + cars[a];
+		document.getElementById(lineid).setAttribute("stroke-width","0")
+		document.getElementById(cars[a]).setAttribute("fill","black")
+		removenodes(cars[a]);
+	}
+}
+</script>
+<svg height="1200" width="1200">
+<defs>
+	<marker id="markerArrow" markerWidth="50" markerHeight="50" refX="50" refY="6" orient="auto">
+	<path d="M2,2 L2,11 L10,6 L2,2" style="fill: orange;" />
+    </marker> 
+</defs>
+<line id="CS206toCS102" stroke-width="0" style="stroke:red;" x2="300" y2="250" x1="250" y1="100" class="arrow" />
+
+<line id="CS201toCS102" stroke-width="0" style="stroke:red;" x2="100" y2="250" x1="250" y1="100" class="arrow" />
+
+<line id="CS211toCS102" stroke-width="0" style="stroke:red;" x2="600" y2="400" x1="250" y1="100" class="arrow" />
+
+<line id="MA301toCS203" stroke-width="0" style="stroke:red;" x2="450" y2="100" x1="700" y1="250" class="arrow" />
+
+<line id="CS202toCS203" stroke-width="0" style="stroke:red;" x2="900" y2="250" x1="750" y1="250" class="arrow" />
+
+<line id="CS206toCS203" stroke-width="0" style="stroke:red;" x2="300" y2="250" x1="700" y1="250" class="arrow" />
+
+<line id="CS206toCS211" stroke-width="0" style="stroke:red;" x2="300" y2="250" x1="600" y1="400" class="arrow" />
+
+<line id="CS314toCS301" stroke-width="0" style="stroke:red;" x2="700" y2="550" x1="800" y1="400" class="arrow" />
+
+<line id="CS304toCS301" stroke-width="0" style="stroke:red;" x2="900" y2="550" x1="800" y1="400" class="arrow" />
+
+<line id="CS206toCS201" stroke-width="0" style="stroke:red;" x2="300" y2="250" x1="100" y1="250" class="arrow" />
+
+<circle onmouseover="joinnodes('CS102')" onmouseleave="removenodes('CS102')" id="CS102" cx="250" cy="100" r="50" stroke="black" fill="black" />
+<text id="TCS102" onmouseover="tjoinnodes('TCS102')" onmouseleave="tremovenodes('TCS102')" x="250" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS102 </text>
+
+<circle onmouseover="joinnodes('CS201')" onmouseleave="removenodes('CS201')" id="CS201" cx="100" cy="250" r="50" stroke="black" fill="black" />
+<text id="TCS201" onmouseover="tjoinnodes('TCS201')" onmouseleave="tremovenodes('TCS201')" x="100" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS201 </text>
+
+<circle onmouseover="joinnodes('MA301')" onmouseleave="removenodes('MA301')" id="MA301" cx="450" cy="100" r="50" stroke="black" fill="black" />
+<text id="TMA301" onmouseover="tjoinnodes('TMA301')" onmouseleave="tremovenodes('TMA301')" x="450" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> MA301 </text>
+
+<circle onmouseover="joinnodes('CS213')" onmouseleave="removenodes('CS213')" id="CS213" cx="650" cy="100" r="50" stroke="black" fill="black" />
+<text id="TCS213" onmouseover="tjoinnodes('TCS213')" onmouseleave="tremovenodes('TCS213')" x="650" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS213 </text>
+
+<circle onmouseover="joinnodes('CS206')" onmouseleave="removenodes('CS206')" id="CS206" cx="300" cy="250" r="50" stroke="black" fill="black" />
+<text id="TCS206" onmouseover="tjoinnodes('TCS206')" onmouseleave="tremovenodes('TCS206')" x="300" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS206 </text>
+
+<circle onmouseover="joinnodes('CS203')" onmouseleave="removenodes('CS203')" id="CS203" cx="700" cy="250" r="50" stroke="black" fill="black" />
+<text id="TCS203" onmouseover="tjoinnodes('TCS203')" onmouseleave="tremovenodes('TCS203')" x="700" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS203 </text>
+
+<circle onmouseover="joinnodes('CS202')" onmouseleave="removenodes('CS202')" id="CS202" cx="900" cy="250" r="50" stroke="black" fill="black" />
+<text id="TCS202" onmouseover="tjoinnodes('TCS202')" onmouseleave="tremovenodes('TCS202')" x="900" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS202 </text>
+
+<circle onmouseover="joinnodes('CS204')" onmouseleave="removenodes('CS204')" id="CS204" cx="850" cy="100" r="50" stroke="black" fill="black" />
+<text id="TCS204" onmouseover="tjoinnodes('TCS204')" onmouseleave="tremovenodes('TCS204')" x="850" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS204 </text>
+
+<circle onmouseover="joinnodes('CS212')" onmouseleave="removenodes('CS212')" id="CS212" cx="1100" cy="250" r="50" stroke="black" fill="black" />
+<text id="TCS212" onmouseover="tjoinnodes('TCS212')" onmouseleave="tremovenodes('TCS212')" x="1100" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS212 </text>
+
+<circle onmouseover="joinnodes('CS306')" onmouseleave="removenodes('CS306')" id="CS306" cx="200" cy="400" r="50" stroke="black" fill="black" />
+<text id="TCS306" onmouseover="tjoinnodes('TCS306')" onmouseleave="tremovenodes('TCS306')" x="200" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS306 </text>
+
+<circle onmouseover="joinnodes('CS303')" onmouseleave="removenodes('CS303')" id="CS303" cx="400" cy="400" r="50" stroke="black" fill="black" />
+<text id="TCS303" onmouseover="tjoinnodes('TCS303')" onmouseleave="tremovenodes('TCS303')" x="400" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS303 </text>
+
+<circle onmouseover="joinnodes('CS211')" onmouseleave="removenodes('CS211')" id="CS211" cx="600" cy="400" r="50" stroke="black" fill="black" />
+<text id="TCS211" onmouseover="tjoinnodes('TCS211')" onmouseleave="tremovenodes('TCS211')" x="600" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS211 </text>
+
+<circle onmouseover="joinnodes('CS301')" onmouseleave="removenodes('CS301')" id="CS301" cx="800" cy="400" r="50" stroke="black" fill="black" />
+<text id="TCS301" onmouseover="tjoinnodes('TCS301')" onmouseleave="tremovenodes('TCS301')" x="800" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS301 </text>
+
+<circle onmouseover="joinnodes('CS313')" onmouseleave="removenodes('CS313')" id="CS313" cx="1000" cy="400" r="50" stroke="black" fill="black" />
+<text id="TCS313" onmouseover="tjoinnodes('TCS313')" onmouseleave="tremovenodes('TCS313')" x="1000" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS313 </text>
+
+<circle onmouseover="joinnodes('CS302')" onmouseleave="removenodes('CS302')" id="CS302" cx="300" cy="550" r="50" stroke="black" fill="black" />
+<text id="TCS302" onmouseover="tjoinnodes('TCS302')" onmouseleave="tremovenodes('TCS302')" x="300" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS302 </text>
+
+<circle onmouseover="joinnodes('CS311')" onmouseleave="removenodes('CS311')" id="CS311" cx="500" cy="550" r="50" stroke="black" fill="black" />
+<text id="TCS311" onmouseover="tjoinnodes('TCS311')" onmouseleave="tremovenodes('TCS311')" x="500" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS311 </text>
+
+<circle onmouseover="joinnodes('CS314')" onmouseleave="removenodes('CS314')" id="CS314" cx="700" cy="550" r="50" stroke="black" fill="black" />
+<text id="TCS314" onmouseover="tjoinnodes('TCS314')" onmouseleave="tremovenodes('TCS314')" x="700" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS314 </text>
+
+<circle onmouseover="joinnodes('CS304')" onclick="displaymodal('MCS304')" onmouseleave="removenodes('CS304')" id="CS304" cx="900" cy="550" r="50" stroke="black" fill="black" />
+<text id="TCS304" onmouseover="tjoinnodes('TCS304')" onmouseleave="tremovenodes('TCS304')" x="900" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS304 </text>
+
+<div id="CS102m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS102</h2>
+    </div>
+    <div class="modal-body">
+      <p>Second semester course</p>
+      <p>credits are 6 points</p>
+      <p>credits are 6 points</p>
+    </div>
+    <div class="modal-footer">
+      <h3>prerequisites</h3>
+    </div>
+  </div>
+</div>
+<div id="MCS304" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS304</h2>
+    </div>
+    <div class="modal-body">
+      <p>Second semester course</p>
+      <p>credits are 6 points</p>
+      <p>credits are 6 points</p>
+    </div>
+    <div class="modal-footer">
+      <h3>prerequisites</h3>
+    </div>
+  </div>
+</div>
+</svg>
+<script type="text/javascript">
+function displaymodal(modalid)
+{
+	give = document.getElementById(modalid);
+	give.style.display = "block";
+}
+
+function closemodal(modalid)
+{
+	take = document.getElementById(modalid);
+	take.close();
+}
+console.log()
+var mcs102 = document.getElementById('CS102m');
+var bcs102 = document.getElementById("CS102");
+var tbcs102 = document.getElementById("TCS102");
+var scs102 = document.getElementsByClassName("close")[0];
+bcs102.onclick = function() {
+    mcs102.style.display = "block";
+}
+tbcs102.onclick = function() {
+    mcs102.style.display = "block";
+}
+scs102.onclick = function() {
+    mcs102.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == mcs102) {
+        mcs102.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
