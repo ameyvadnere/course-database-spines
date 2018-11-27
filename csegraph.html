@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>Course Database & Spines</title>
+ <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+  <style>
+  .con{
+    align-content: center;
+    border: 1px solid black;
+    background-color: #C484EF;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    /*max-width: 50%;*/
+    width: 500px;
+    height: 50px;
+    transition: width 0.7s;
+
+  }
+  
+
+  .con:hover {
+  	width: 100%;
+}
+
+	h1 {
+
+	  font-family: "Caudex";	
+
+	}
+
+	.arrow{
+		stroke: rgb(0,0,0);
+		marker-end:url(#markerArrow);
+	}
+</style>
+
+</head>
+
+<body>
+  <center>
+  <div class="con">
+  	<center>
+  <h1>Course Database and Spines</h1>
+  	</center>
+</div>
+</center>
+
+<br>
+<br>
+
+<svg height="1000" width="1000">
+	<defs>
+		<marker id="markerArrow" markerWidth="50" refX="18" refY="6" orient="auto">
+			<path d="M2,2 L2,11 L10,6 L2,2" style="fill: orange;" />
+		</marker>
+	</defs>
+
+	<circle cx="50" cy="50" r="30" stroke="green" stroke-width="1" fill="orange" />
+	
+	<text x="50" y="50" font-size="15" alignment-baseline="middle" text-anchor="middle" fill="blue">CS101</text>
+
+	<circle cx="200" cy="200" r="30" stroke="green" stroke-width="1" fill="orange" />
+
+	<line stroke-width="2" style="stroke:blue;" x1="80" y1="80" x2="170" y2="170" class="arrow"/>
+
+</svg>
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.con{
+    width: 100px;
+    height: 100px;
+    background: red;
+   /*-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+}
+
+.con:hover {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+<div class='con'>Eminem</div>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+</html>
+-->

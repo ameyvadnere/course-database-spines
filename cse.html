@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+
+
+<title>Course Database & Spines</title>
+ 
+ <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+ <link rel="stylesheet" href="style1.css">  
+ <link rel="stylesheet" href="style.css">  
+ <script type="text/javascript" src="index.js"></script>
+ <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <style>
+  
+  .con{
+    align-content: center;
+    border: 1px solid black;
+    background-color: #C484EF;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    /*max-width: 50%;*/
+    width: 500px;
+    height: 50px;
+    transition: width 0.7s;
+
+  }
+  
+
+  .con:hover {
+    width: 100%;
+}
+
+  h1 {
+
+    font-family: "Caudex";  
+
+  }
+
 table {
 font-family: arial, sans-serif;
 border-collapse: collapse;
@@ -96,6 +132,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 
 <body>
+
+
+  <center>
+  <div class="con">
+    <center>
+  <h1>Course Database and Spines</h1>
+    </center>
+</div>
+</center>
+
+<br>
+<br>
+
+<button id="yoman" class="modal-open">Open modal box</button>
+<div class="modal-box">
+    <div class="modal-box-content">
+        <ul>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li><a href="#">Four</a></li>
+            <li><a href="#">Five</a></li>
+        </ul>
+    </div>
+    <button class="modal-close"><span class="visuallyhidden">Close modal box</span></button>
+</div>
+
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript">console.log()</script>
   <script type="text/javascript">
   	var mainlist = [];
 	var one = [];
@@ -299,5 +364,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+
+
 </body>
 </html>

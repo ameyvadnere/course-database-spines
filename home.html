@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Course Database and Spines
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width="device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+    <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+
+  	<style type="text/css">
+  		
+  		#heading
+  			{
+  				width: 100%;
+  				margin: auto;
+  				color: darkblue;
+  				height: 200px;
+  				background-color: #0CABF8  ;
+  				size: 30px;
+  				font-size: 50px;
+  				font-family: "Caudex";
+  				text-align: left;
+  				vertical-align: middle;
+  				display: flex;
+  				justify-content: center;
+  				align-items: center;
+  				border: 5px solid darkblue;
+  			}
+
+
+
+        
+        .button1
+        {
+          width: 50%;
+          margin-left: 0px;
+          color: darkgreen ;
+          height: 100px;
+          background-color: #50FF17  ;
+          size: 20px;
+          font-size: 25px;
+          font-family: "Caudex";
+          text-align: center;
+          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: /*5px solid #9C007D*/ none  ;
+          transition: width 0.5s;*/
+        }
+  		
+        .button1:hover {
+           width: 100%;
+           font-size: 40px;
+           text-align: right; 
+         }
+
+         .button3
+        {
+          width: 50%;
+          margin-left: 0px;
+          color: #0B1B84  ;
+          height: 100px;
+          background-color: #FCF703    ;
+          size: 20px;
+          font-size: 25px;
+          font-family: "Caudex";
+          text-align: center;
+          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /*border: 5px solid #0B1B84*/  ;
+          transition: width 0.5s;
+        }
+      
+        .button3:hover {
+           width: 100%;
+           font-size: 40px;
+           text-align: right; 
+         }
+
+         .button4
+        {
+          width: 50%;
+          margin-left: 0px;
+          color: #0DCAA9;
+          height: 100px;
+          background-color: #305E87;
+          size: 20px;
+          font-size: 25px;
+          font-family: "Caudex";
+          text-align: center;
+          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /*border: 5px solid #00654D;*/
+          transition: width 0.5s;
+        }
+      
+        .button4:hover {
+           width: 100%;
+           font-size: 40px;
+           text-align: right; 
+         }
+
+         .button5
+        {
+          width: 50%;
+          margin-left: 0px;
+          color: #00654D;
+          height: 100px;
+          background-color: #00D7A5;
+          size: 20px;
+          font-size: 25px;
+          font-family: "Caudex";
+          text-align: center;
+          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 5px solid #00654D;
+          transition: width 0.5s;
+        }
+      
+        .button5:hover {
+           width: 100%;
+           font-size: 40px;
+           text-align: right; 
+         }
+
+
+
+        .collapse{
+         
+         text-align: left; 
+
+        }
+
+        .button2 {
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Caudex";
+  background-color: orange;
+  border: 5px solid darkorange;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+}
+
+
+  	</style>
+
+</head>
+
+<body>
+
+<div id="heading">
+		Course Database and Spines		
+</div>
+
+<br>
+<br>
+
+
+
+<div class="container">
+  
+  <button type="button" class="button2" data-toggle="collapse" data-target="#demo"><span>Select a Branch </span></button>
+  
+  <div id="demo" class="collapse">
+    
+    
+    <br>
+    <div class="csebox">
+      <button type="button" class="button1">Computer Science & Engineering</button>
+    </div>
+    <br>
+    <div class="eebox">
+      <button type="button" class="button3">Electrical Engineering</button>
+    </div>
+    <br>
+    <div class="mechbox">
+      <button type="button" class="button4">Mechanical Engineering</button>
+    </div>
+    <br>
+    <div class="othbox">
+      <button type="button" class="button5">Other Courses</button>
+    </div>
+
+  </center>
+
+  </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

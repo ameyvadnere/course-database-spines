@@ -3,6 +3,9 @@
 <head>
 	<title>Mechanical Engineering</title>
 
+ <script type="text/javascript" src="index.js"></script>
+
+
 	<style type="text/css">
 		table {
 font-family: arial, sans-serif;
@@ -99,6 +102,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 
 <body>
+
+
 	<script type="text/javascript">
 		var mainlist = []
 		
@@ -170,8 +175,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 		var me304 = []
 		me304.push("ME304")
 		me304.push("ME206")
-		me304.push("ME201")
-		mainlist.push(me311)
+		//me304.push("ME201")
+		mainlist.push(me304)
 
 		var me305 = []
 		me305.push("ME305")
@@ -190,8 +195,57 @@ body {font-family: Arial, Helvetica, sans-serif;}
 		me314.push("ME314")
 		mainlist.push(me314)
 
+
+		function joinnodes(add)
+			{	
+				//document.getElementById(give).setAttribute("fill",#F9B708)
+				var index=0
+				for (var i=0; i<mainlist.length; i++)
+				{	
+					var cars = mainlist[i]
+					if (cars[0] == add)
+					{
+						index = i
+						break;
+					}
+				}
+				var temp = mainlist[index];
+				for (var j=1; j<temp.length; j++)
+				{
+					var lineid = temp[0] + "TO" + temp[j];
+					document.getElementById(lineid).setAttribute("stroke-width", "2")
+					//document.getElementById(temp[j]).setAttribute("fill", #F9B708)
+					joinnodes(temp[j])
+				}
+			}
+		console.log();
+
+		function removenodes(add)
+			{	
+				//document.getElementById(give).setAttribute("fill",#305E87)
+				var index=0
+				for (var i=0; i<mainlist.length; i++)
+				{	
+					var cars = mainlist[i]
+					if (cars[0] == add)
+					{
+						index = i
+						break;
+					}
+				}
+				var temp = mainlist[index];
+				for (var j=1; j<temp.length; j++)
+				{
+					var lineid = temp[0] + "TO" + temp[j];
+					document.getElementById(lineid).setAttribute("stroke-width", "0")
+					//document.getElementById(temp[j]).setAttribute("fill", #305E87)
+					removenodes(temp[j])
+				}
+			}
+		console.log()
 	</script>
 
+	<CENTER>
 	<svg height="5000" width="1500">
     <defs>
         <marker id="markerArrow" markerWidth="50" markerHeight="50" refX="45" refY="6" orient="auto">
@@ -199,95 +253,96 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </marker> 
     </defs>
 
-    <line stroke-width="2" style="stroke:black" x1="200" x2="450" y1="250" y2="250" class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="700" x2="700" y1="400" y2="250" class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="400" x2="700" y1="400" y2="100"	class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="1000" x2="700" y1="400" y2="250" class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="950" x2="700" y1="550" y2="400"	 class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="450" x2="700" y1="550" y2="550"	 class="arrow"/>
-    <line stroke-width="2" style="stroke:black" x1="950" x2="1000" y1="250" y2="100" class="arrow"/>
+    <line id="ME205TOME211" stroke-width="0" style="stroke:black" x2="200" x1="450" y2="250" y1="250" class="arrow"/>
+    <line id="ME206TOME201" stroke-width="0" style="stroke:black" x2="700" x1="700" y2="400" y1="250" class="arrow"/>
+    <line id="ME212TOME203" stroke-width="0" style="stroke:black" x2="400" x1="700" y2="400" y1="100"	class="arrow"/>
+    <line id="ME303TOME201" stroke-width="0" style="stroke:black" x2="1000" x1="700" y2="400" y1="250" class="arrow"/>
+    <line id="ME304TOME206" stroke-width="0" style="stroke:black" x2="950" x1="700" y2="550" y1="400"	 class="arrow"/>
+    <line id="ME311TOMECHMEAS" stroke-width="0" style="stroke:black" x2="450" x1="700" y2="550" y1="550"	 class="arrow"/>
+    <line id="ME204TOME208" stroke-width="0" style="stroke:black" x2="950" x1="1000" y2="250" y1="100" class="arrow"/>
 
 
-    <circle cx="100" cy="100" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME111')" onmouseleave="removenodes('ME111')" cx="100" cy="100" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="100" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me111</text>
+    font-size="25" fill=#0DCAA9  >me111</text>
 
-    <circle cx="400" cy="100" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME113')" onmouseleave="removenodes('ME113')" cx="400" cy="100" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="400" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me113</text>
+    font-size="25" fill=#0DCAA9  >me113</text>
 
-    <circle cx="700" cy="100" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME203')"  onmouseleave="removenodes('ME203')" cx="700" cy="100" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="700" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me203</text>
+    font-size="25" fill=#0DCAA9  >me203</text>
 
-    <circle cx="1000" cy="100" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME208')" onmouseleave="removenodes('ME208')"  cx="1000" cy="100" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="1000" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me208</text>
+    font-size="25" fill=#0DCAA9  >me208</text>
 
-    <circle cx="200" cy="250" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME205')"  onmouseleave="removenodes('ME205')"  id="me205" cx="200" cy="250" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="200" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me205</text>
+    font-size="25" fill=#0DCAA9  >me205</text>
 
-    <circle cx="450" cy="250" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME211')"  onmouseleave="removenodes('ME211')" id="me211" cx="450" cy="250" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="450" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me211</text>
+    font-size="25" fill=#0DCAA9  >me211</text>
 
-    <circle cx="700" cy="250" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME201')"  onmouseleave="removenodes('ME201')" cx="700" cy="250" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="700" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me201</text>
+    font-size="25" fill=#0DCAA9  >me201</text>
 
-    <circle cx="950" cy="250" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME204')" onmouseleave="removenodes('ME204')"  cx="950" cy="250" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="950" y="250" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me204</text>
+    font-size="25" fill=#0DCAA9  >me204</text>
 
-    <circle cx="100" cy="400" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME202')"  onmouseleave="removenodes('ME202')" cx="100" cy="400" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="100" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me202</text>
+    font-size="25" fill=#0DCAA9  >me202</text>
 
-    <circle cx="400" cy="400" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME212')"  onmouseleave="removenodes('ME212')" cx="400" cy="400" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="400" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me212</text>
+    font-size="25" fill=#0DCAA9  >me212</text>
 
-    <circle cx="700" cy="400" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME206')"  onmouseleave="removenodes('ME206')" cx="700" cy="400" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="700" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me206</text>
+    font-size="25" fill=#0DCAA9  >me206</text>
 
-    <circle cx="1000" cy="400" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME303')"  onmouseleave="removenodes('ME303')" cx="1000" cy="400" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="1000" y="400" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me303</text>
+    font-size="25" fill=#0DCAA9  >me303</text>
 
-    <circle cx="200" cy="550" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME305')"  onmouseleave="removenodes('ME305')" cx="200" cy="550" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="200" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me305</text>
+    font-size="25" fill=#0DCAA9  >me305</text>
 
-    <circle cx="450" cy="550" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME311')" onmouseleave="removenodes('ME311')"  cx="450" cy="550" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="450" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me311</text>
+    font-size="25" fill=#0DCAA9  >me311</text>
 
-    <circle cx="700" cy="550" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('MECHMEAS')" onmouseleave="removenodes('MECHMEAS')"  cx="700" cy="550" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="700" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="16" fill="blue">Mech. Meas.</text>
+    font-size="16" fill=#0DCAA9  >Mech. Meas.</text>
 
-    <circle cx="950" cy="550" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME304')" onmouseleave="removenodes('ME304')"  cx="950" cy="550" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="950" y="550" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me304</text>
+    font-size="25" fill=#0DCAA9  >me304</text>
 
-	<circle cx="100" cy="700" r="50" stroke="green" stroke-width="0" fill="orange" />
+	<circle onmouseover="joinnodes('ME312')"  onmouseleave="removenodes('ME312')"  cx="100" cy="700" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="100" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me305</text>    
+    font-size="25" fill=#0DCAA9  >me312</text>    
 
-    <circle cx="400" cy="700" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME302')"  onmouseleave="removenodes('ME302')" cx="400" cy="700" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="400" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me302</text>
+    font-size="25" fill=#0DCAA9  >me302</text>
 
-    <circle cx="700" cy="700" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME301')"  onmouseleave="removenodes('ME301')" cx="700" cy="700" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="700" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me301</text>
+    font-size="25" fill=#0DCAA9  >me301</text>
 
-    <circle cx="1000" cy="700" r="50" stroke="green" stroke-width="0" fill="orange" />
+    <circle onmouseover="joinnodes('ME314')"  onmouseleave="removenodes('ME314')" cx="1000" cy="700" r="50" stroke="green" stroke-width="0" fill=#305E87   />
     <text x="1000" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Constantia"
-    font-size="25" fill="blue">me314</text>            
+    font-size="25" fill=#0DCAA9  >me314</text>            
 
+    </CENTER>
 
 </body>
 </html>
