@@ -222,10 +222,118 @@ ee316.push("EE201")
 ee316.push("EE303")
 ee316.push("EE312")
 ee316.push("EE212")
+ee316.push("EE203")
+ee316.push("EE102")
+ee316.push("EE210")
+ee316.push("EE202")
+ee316.push("EE205")
+ee316.push("EE207")
+ee316.push("EE208")
+ee316.push("EE307")
+ee316.push("EE305")
 mainlist.push(ee316)
+function eespecial(give)
+{
+    document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        //var lineid = cars[0] + "to" + cars[a];
+        //document.getElementById(lineid).setAttribute("stroke-width","2")
+        document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
+        //joinnodes(cars[a]);
+    }
+}
+function teespecial(give1)
+{
+    give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+    document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        //var lineid = cars[0] + "to" + cars[a];
+        //document.getElementById(lineid).setAttribute("stroke-width","2")
+        document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
+        //joinnodes(cars[a]);
+    }
+}
+function reespcial(give)
+{
+    document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        //var lineid = cars[0] + "to" + cars[a];
+        //document.getElementById(lineid).setAttribute("stroke-width","0")
+        document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(give).setAttribute("r","50")
+        //removenodes(cars[a]);
+    }
+}
+function treespecial(give1)
+{
+    give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+    document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        //var lineid = cars[0] + "to" + cars[a];
+        //document.getElementById(lineid).setAttribute("stroke-width","0")
+        document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(give).setAttribute("r","50")
+        //removenodes(cars[a]);
+    }
+}
 function joinnodes(give)
 {
     document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
     var index = 0
     for(var i=0;i<mainlist.length;i++)
     {
@@ -242,6 +350,7 @@ function joinnodes(give)
         var lineid = cars[0] + "to" + cars[a];
         document.getElementById(lineid).setAttribute("stroke-width","2")
         document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
         joinnodes(cars[a]);
     }
 }
@@ -249,6 +358,7 @@ function tjoinnodes(give1)
 {
     give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
     document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
     var index = 0
     for(var i=0;i<mainlist.length;i++)
     {
@@ -265,12 +375,14 @@ function tjoinnodes(give1)
         var lineid = cars[0] + "to" + cars[a];
         document.getElementById(lineid).setAttribute("stroke-width","2")
         document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
         joinnodes(cars[a]);
     }
 }
 function removenodes(give)
 {
     document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
     var index = 0
     for(var i=0;i<mainlist.length;i++)
     {
@@ -287,6 +399,7 @@ function removenodes(give)
         var lineid = cars[0] + "to" + cars[a];
         document.getElementById(lineid).setAttribute("stroke-width","0")
         document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(give).setAttribute("r","50")
         removenodes(cars[a]);
     }
 }
@@ -294,6 +407,7 @@ function tremovenodes(give1)
 {
     give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
     document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
     var index = 0
     for(var i=0;i<mainlist.length;i++)
     {
@@ -310,6 +424,7 @@ function tremovenodes(give1)
         var lineid = cars[0] + "to" + cars[a];
         document.getElementById(lineid).setAttribute("stroke-width","0")
         document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(give).setAttribute("r","50")
         removenodes(cars[a]);
     }
 }
@@ -322,41 +437,41 @@ console.log()
     </marker> 
 </defs>
 
-<line id="EE102toMA101" stroke-width="2" style="stroke:red;" x2="250" y2="100" x1="550" y1="300" class="arrow" />
+<line id="EE102toMA101" stroke-width="0" style="stroke:red;" x2="250" y2="100" x1="550" y1="300" class="arrow" />
 
-<line id="EE203toEE102" stroke-width="2" style="stroke:red;" x2="100" y2="200" x1="250" y1="100" class="arrow" />
+<line id="EE203toEE102" stroke-width="0" style="stroke:red;" x2="100" y2="200" x1="250" y1="100" class="arrow" />
 
-<line id="EE202toEE101" stroke-width="2" style="stroke:red;" x2="650" y2="100" x1="320" y1="300" class="arrow" />
+<line id="EE202toEE101" stroke-width="0" style="stroke:red;" x2="650" y2="100" x1="320" y1="300" class="arrow" />
 
-<line id="PH102toMA101" stroke-width="2" style="stroke:red;" x2="850" y2="100" x1="550" y1="300" class="arrow" />
+<line id="PH102toMA101" stroke-width="0" style="stroke:red;" x2="850" y2="100" x1="550" y1="300" class="arrow" />
 
-<line id="MA202toMA101" stroke-width="2" style="stroke:red;" x2="750" y2="300" x1="550" y1="300" class="arrow" />
+<line id="MA202toMA101" stroke-width="0" style="stroke:red;" x2="750" y2="300" x1="550" y1="300" class="arrow" />
 
-<line id="EE210toMA101" stroke-width="2" style="stroke:red;" x2="450" y2="100" x1="550" y1="300" class="arrow" />
+<line id="EE210toMA101" stroke-width="0" style="stroke:red;" x2="450" y2="100" x1="550" y1="300" class="arrow" />
 
-<line id="EE206toEE101" stroke-width="2" style="stroke:red;" x2="130" y2="350" x1="320" y1="300" class="arrow" />
+<line id="EE206toEE101" stroke-width="0" style="stroke:red;" x2="130" y2="350" x1="320" y1="300" class="arrow" />
 
-<line id="MA202toMA102" stroke-width="2" style="stroke:red;" x1="750" y1="300" x2="950" y2="300" class="arrow" />
+<line id="MA202toMA102" stroke-width="0" style="stroke:red;" x1="750" y1="300" x2="950" y2="300" class="arrow" />
 
-<line id="EE303toMA102" stroke-width="2" style="stroke:red;" x2="650" y2="500" x1="950" y1="300" class="arrow" />
+<line id="EE303toMA102" stroke-width="0" style="stroke:red;" x2="650" y2="500" x1="950" y1="300" class="arrow" />
 
-<line id="EE202toEE201" stroke-width="2" style="stroke:red;" x2="650" y2="100" x1="150" y1="500" class="arrow" />
+<line id="EE202toEE201" stroke-width="0" style="stroke:red;" x2="650" y2="100" x1="150" y1="500" class="arrow" />
 
-<line id="EE314toEE305" stroke-width="2" style="stroke:red;" x1="400" y1="750" x2="550" y2="650" class="arrow" />
+<line id="EE314toEE305" stroke-width="0" style="stroke:red;" x1="700" y1="830" x2="550" y2="650" class="arrow" />
 
-<line id="EE312toEE303" stroke-width="2" style="stroke:red;" x1="650" y1="500" x2="750" y2="650" class="arrow" />
+<line id="EE312toEE303" stroke-width="0" style="stroke:red;" x1="650" y1="500" x2="750" y2="650" class="arrow" />
 
-<line id="MA202toMA104" stroke-width="2" style="stroke:red;" x2="1050" y2="500" x1="750" y1="300" class="arrow" />
+<line id="MA202toMA104" stroke-width="0" style="stroke:red;" x2="1050" y2="500" x1="750" y1="300" class="arrow" />
 
-<line id="EE307toMA101" stroke-width="2" style="stroke:red;" x1="550" y1="300" x2="100" y2="670" class="arrow" />
+<line id="EE307toMA101" stroke-width="0" style="stroke:red;" x1="550" y1="300" x2="100" y2="670" class="arrow" />
 
-<line id="EE208toMA101" stroke-width="2" style="stroke:red;" x1="550" y1="300" x2="850" y2="500" class="arrow" />
+<line id="EE208toMA101" stroke-width="0" style="stroke:red;" x1="550" y1="300" x2="850" y2="500" class="arrow" />
 
-<line id="MA104toMA101" stroke-width="2" style="stroke:red;" x2="550" y2="300" x1="1050" y1="500" class="arrow" />
+<line id="MA104toMA101" stroke-width="0" style="stroke:red;" x2="550" y2="300" x1="1050" y1="500" class="arrow" />
 
 
 
-<line id="EE316toEE212" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="500" y1="830" class="arrow" />
+<!--<line id="EE316toEE212" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="500" y1="830" class="arrow" />
 
 <line id="EE316toEE314" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="550" y1="650" class="arrow" />
 
@@ -372,7 +487,7 @@ console.log()
 
 <line id="EE316toEE303" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="650" y1="500" class="arrow" />
 
-<line id="EE316toEE312" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="750" y1="650" class="arrow" />
+<line id="EE316toEE312" stroke-width="2" style="stroke:red;" x2="430" y2="500" x1="750" y1="650" class="arrow" />--->
 
 <circle onmouseover="joinnodes('EE102')" onmouseleave="removenodes('EE102')" id="EE102" cx="250" cy="100" r="50" stroke="black" fill="black" />
 <text id="TEE102" onmouseover="tjoinnodes('TEE102')" onmouseleave="tremovenodes('TEE102')" x="250" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE102 </text>
@@ -413,8 +528,8 @@ console.log()
 <circle onmouseover="joinnodes('EE202')" onmouseleave="removenodes('EE202')" id="EE202" cx="650" cy="100" r="50" stroke="black" fill="black" />
 <text id="TEE202" onmouseover="tjoinnodes('TEE202')" onmouseleave="tremovenodes('TEE202')" x="650" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE202 </text>
 
-<circle onmouseover="joinnodes('EE316')" onmouseleave="removenodes('EE316')" id="EE316" cx="430" cy="500" r="50" stroke="black" fill="black" />
-<text id="TEE316" onmouseover="tjoinnodes('TEE316')" onmouseleave="tremovenodes('TEE316')" x="430" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE316 </text>
+<circle onmouseover="eespecial('EE316')" onmouseleave="reespcial('EE316')" id="EE316" cx="430" cy="500" r="50" stroke="black" fill="black" />
+<text id="TEE316" onmouseover="teespecial('TEE316')" onmouseleave="treespecial('TEE316')" x="430" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE316 </text>
 
 <circle onmouseover="joinnodes('EE201')" onmouseleave="removenodes('EE201')" id="EE201" cx="150" cy="500" r="50" stroke="black" fill="black" />
 <text id="TEE201" onmouseover="tjoinnodes('TEE201')" onmouseleave="tremovenodes('TEE201')" x="150" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE201 </text>
@@ -428,8 +543,8 @@ console.log()
 <circle onmouseover="joinnodes('EE314')" onmouseleave="removenodes('EE314')" id="EE314" cx="550" cy="650" r="50" stroke="black" fill="black" />
 <text id="TEE314" onmouseover="tjoinnodes('TEE314')" onmouseleave="tremovenodes('TEE314')" x="550" y="650" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE314 </text>
 
-<circle onmouseover="joinnodes('EE305')" onmouseleave="removenodes('EE305')" id="EE305" cx="400" cy="750" r="50" stroke="black" fill="black" />
-<text id="TEE305" onmouseover="tjoinnodes('TEE305')" onmouseleave="tremovenodes('TEE305')" x="400" y="750" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE305 </text>
+<circle onmouseover="joinnodes('EE305')" onmouseleave="removenodes('EE305')" id="EE305" cx="700" cy="830" r="50" stroke="black" fill="black" />
+<text id="TEE305" onmouseover="tjoinnodes('TEE305')" onmouseleave="tremovenodes('TEE305')" x="700" y="830" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE305 </text>
 
 <circle onmouseover="joinnodes('EE302')" onmouseleave="removenodes('EE302')" id="EE302" cx="250" cy="620" r="50" stroke="black" fill="black" />
 <text id="TEE302" onmouseover="tjoinnodes('TEE302')" onmouseleave="tremovenodes('TEE302')" x="250" y="620" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> EE302 </text>
