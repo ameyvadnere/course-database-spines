@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="lightblue">
+<head>
+<title>Electives</title>
+<style type="text/css">
+
+.mytable th,tr {
+    text-align: left;
+    font-size: 25px  
+    }  
+.mytable th{
+    color: cyan;
+    background: darkblue;
+}    
+.mytable table,tr,td {
+    border: 0.5px solid black;
+    padding: 15px;
+    font-family: "Constantia";
+    font-size: 15px
+}
+
+#yo tr:hover {background-color: #ddd;}
+
+#yo tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+
+table {
+font-family: arial, sans-serif;
+width: 100%;
+font-size: 18px;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;	    
+}
+
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+.arrow{
+  stroke:rgb(0,0,0);
+  marker-end:url(#markerArrow)
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}	
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+</style>
+</head>
+<body>
+    <div align=right>
+    <div style="width:500px">
+<table align=right id="yo" class = "sticky mytable"  style="width:500px">
+        <tr>
+            <th width=20>Code</th>
+            <th width=100>Course Name</th>
+        </tr>
+
+        <tr>
+            <td>ALGEB</td>
+            <td>Albebra codes and Combinatorics</td>
+        </tr>
+        
+        <tr>
+            <td>ASTRO</td>
+            <td>Astrophysics for Engineers</td>
+        </tr>
+
+        <tr>
+            <td>QUANT</td>
+            <td>Quantum computation </td>
+        </tr>
+
+        <tr>
+            <td>FSFTR</td>
+            <td>Fourier series and Fourier transforms</td>
+        </tr>
+
+        <tr>
+            <td>SEEMA</td>
+            <td>Sustainable energy and energy materials</td>
+        </tr>
+
+        <tr>
+            <td>GRAPH</td>
+            <td>Graph Theory and its application</td>
+        </tr>
+
+        <tr>
+            <td>DEELE</td>
+            <td>Deep Learning</td>
+        </tr>
+
+        <tr>
+            <td>IANNE</td>
+            <td>Introduction to Artificial Neural Networks</td>
+        </tr>
+
+        <tr>
+            <td>DESIN</td>
+            <td>Topic in Design and Analysis of Algorithms</td>
+        </tr>
+
+        <tr>
+            <td>SYSME</td>
+            <td>Synthesis of Mechanisms</td>
+        </tr>
+
+        <tr>
+            <td>THELS</td>
+            <td>Theory of Elasticity</td>
+        </tr>
+
+        <tr>
+            <td>TURBO</td>
+            <td>Introduction to Turbulence and its Modelling</td>
+        </tr>
+
+        <tr>
+            <td>MHERO</td>
+            <td>Modernism and the ‘Hero’ </td>
+        </tr>
+
+        <tr>
+            <td>IPMAN</td>
+            <td>Intellectual Property Management</td>
+        </tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">
+var mainlist = []
+var robot = []
+robot.push("ROBOT")
+robot.push("ME201")
+mainlist.push(robot)
+
+var ph102 = []
+ph102.push("PH102")
+mainlist.push(ph102)
+
+var ph101 = []
+ph101.push("PH101")
+mainlist.push(ph101)
+
+var astro_engi = []
+astro_engi.push("ASTRO")
+astro_engi.push("PH101")
+astro_engi.push("PH102")
+mainlist.push(astro_engi)
+
+var qc = []
+qc.push("QUANT")
+qc.push("PH101")
+qc.push("MA102")
+mainlist.push(qc)
+
+var fsftr = []
+fsftr.push("FSFTR")
+fsftr.push("MA102")
+fsftr.push("MA101")
+mainlist.push(fsftr)
+
+var ma101 = []
+ma101.push("MA101")
+mainlist.push(ma101)
+
+var deele = []
+deele.push("DEELE")
+deele.push("MA101")
+deele.push("MA102")
+mainlist.push(deele)
+
+var graph = []
+graph.push("GRAPH")
+graph.push("CS203")
+mainlist.push(graph)
+
+var cs203 = []
+cs203.push("CS203")
+mainlist.push(cs203)
+
+var seema = []
+seema.push("SEEMA")
+seema.push("CH101")
+mainlist.push(seema)
+
+var ianne = []
+ianne.push("IANNE")
+mainlist.push(ianne)
+
+var desig = []
+desig.push("DESIN")
+desig.push("CS206")
+desig.push("CS203")
+desig.push("CS201")
+mainlist.push(desig)
+
+var cs206 = []
+cs206.push("CS206")
+cs206.push("CS102")
+cs206.push("CS201")
+cs206.push("CS211")
+cs206.push("CS203")
+mainlist.push(cs206)
+
+
+var cs211 = []
+cs211.push("CS211")
+cs211.push("CS102")
+mainlist.push(cs211)
+
+var cs201 = []
+cs201.push("CS201")
+cs201.push("CS102")
+mainlist.push(cs201)
+
+var cs102 = []
+cs102.push("CS102")
+mainlist.push(cs102)
+
+var sysme = []
+sysme.push("SYSME")
+sysme.push("ME111")
+mainlist.push(sysme)
+
+var me111 = []
+me111.push("ME111")
+mainlist.push(me111)
+
+var thels = []
+thels.push("THELS")
+thels.push("ME206")
+mainlist.push(thels)
+
+var me206 = []
+me206.push("ME206")
+me206.push("ME201")
+mainlist.push(me206)
+
+var me201 = []
+me201.push("ME201")
+mainlist.push(me201)
+
+var turbo = []
+turbo.push("TURBO")
+turbo.push("ME203")
+mainlist.push(turbo)
+
+var me203 = []
+me203.push("ME203")
+mainlist.push(me203)
+
+var moden = []
+moden.push("MODEN")
+mainlist.push(moden)
+
+var ipman = []
+ipman.push("IPMAN")
+mainlist.push(ipman)
+
+var algeb = []
+algeb.push("ALGEB")
+algeb.push("MA102")
+mainlist.push(algeb)
+
+var ma102 = []
+ma102.push("MA102")
+mainlist.push(ma102)
+
+var ch101 = []
+ch101.push("CH101")
+mainlist.push(ch101)
+
+var mhero = []
+mhero.push("MHERO")
+mainlist.push(mhero)
+
+function joinnodes(give)
+{
+    document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        var lineid = cars[0] + "to" + cars[a];
+        document.getElementById(lineid).setAttribute("stroke-width","2")
+        document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
+        joinnodes(cars[a]);
+    }
+}
+function tjoinnodes(give1)
+{
+    give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+    document.getElementById(give).setAttribute("fill","purple")
+    document.getElementById(give).setAttribute("r","55")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        var lineid = cars[0] + "to" + cars[a];
+        document.getElementById(lineid).setAttribute("stroke-width","2")
+        document.getElementById(cars[a]).setAttribute("fill","purple")
+        document.getElementById(cars[a]).setAttribute("r","55")
+        joinnodes(cars[a]);
+    }
+}
+function removenodes(give)
+{
+    document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        var lineid = cars[0] + "to" + cars[a];
+        document.getElementById(lineid).setAttribute("stroke-width","0")
+        document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(cars[a]).setAttribute("r","50")
+        removenodes(cars[a]);
+    }
+}
+function tremovenodes(give1)
+{
+    give = give1[1] + give1[2] + give1[3] + give1[4] + give1[5]
+    document.getElementById(give).setAttribute("fill","black")
+    document.getElementById(give).setAttribute("r","50")
+    var index = 0
+    for(var i=0;i<mainlist.length;i++)
+    {
+        var temp = mainlist[i];
+        if(temp[0] == give)
+        {
+            index = i;
+            break;
+        }
+    }
+    var cars = mainlist[index];
+    for(var a=1;a<cars.length;a++)
+    {
+        var lineid = cars[0] + "to" + cars[a];
+        document.getElementById(lineid).setAttribute("stroke-width","0")
+        document.getElementById(cars[a]).setAttribute("fill","black")
+        document.getElementById(cars[a]).setAttribute("r","50")
+        removenodes(cars[a]);
+    }
+}
+</script>
+<svg height="1200" width="1000">
+<defs>
+    <marker id="markerArrow" markerWidth="50" markerHeight="50" refX="50" refY="6" orient="auto">
+    <path d="M2,2 L2,11 L10,6 L2,2" style="fill: orange;" />
+    </marker> 
+</defs>
+<line id="ALGEBtoMA102" stroke-width="0" style="stroke:red;" x2="100" y2="300" x1="300" y1="300" class="arrow" />
+
+<line id="ASTROtoPH101" stroke-width="0" style="stroke:red;" x2="500" y2="300" x1="700" y1="300" class="arrow" />
+
+<line id="ASTROtoPH102" stroke-width="0" style="stroke:red;" x2="500" y2="300" x1="500" y1="100" class="arrow" />
+
+<line id="QUANTtoPH101" stroke-width="0" style="stroke:red;" x1="700" y1="300" x2="700" y2="100" class="arrow" />
+
+<line id="QUANTtoMA102" stroke-width="0" style="stroke:red;" x1="300" y1="300" x2="700" y2="100" class="arrow" />
+
+<line id="FSFTRtoMA101" stroke-width="0" style="stroke:red;" x1="500" y1="500" x2="300" y2="500" class="arrow" />
+
+<line id="FSFTRtoMA102" stroke-width="0" style="stroke:red;" x1="300" y1="300" x2="300" y2="500" class="arrow" />
+
+<line id="SEEMAtoCH101" stroke-width="0" style="stroke:red;" x1="900" y1="300" x2="900" y2="100" class="arrow" />
+
+<line id="GRAPHtoCS203" stroke-width="0" style="stroke:red;" x1="900" y1="700" x2="900" y2="500" class="arrow" />
+
+<line id="DEELEtoMA101" stroke-width="0" style="stroke:red;" x1="300" y1="300" x2="700" y2="500" class="arrow" />
+
+<line id="DEELEtoMA102" stroke-width="0" style="stroke:red;" x1="500" y1="500" x2="700" y2="500" class="arrow" />
+
+<line id="DESINtoCS203" stroke-width="0" style="stroke:red;" x1="900" y1="700" x2="900" y2="900" class="arrow" />
+
+<line id="DESINtoCS206" stroke-width="0" style="stroke:red;" x1="700" y1="900" x2="900" y2="900" class="arrow" />
+
+<line id="DESINtoCS201" stroke-width="0" style="stroke:red;" x1="500" y1="700" x2="900" y2="900" class="arrow" />
+
+<line id="SYSMEtoME111" stroke-width="0" style="stroke:red;" x1="900" y1="1100" x2="700" y2="1100" class="arrow" />
+
+<line id="THELStoME206" stroke-width="0" style="stroke:red;" x1="100" y1="700" x2="100" y2="500" class="arrow" />
+
+<line id="TURBOtoME203" stroke-width="0" style="stroke:red;" x1="300" y1="900" x2="100" y2="1100" class="arrow" />
+
+<line id="CS206toCS102" stroke-width="0" style="stroke:red;" x1="700" y1="700" x2="700" y2="900" class="arrow" />
+
+<line id="CS206toCS201" stroke-width="0" style="stroke:red;" x1="500" y1="700" x2="700" y2="900" class="arrow" />
+
+<line id="CS206toCS211" stroke-width="0" style="stroke:red;" x1="500" y1="900" x2="700" y2="900" class="arrow" />
+
+<line id="CS206toCS203" stroke-width="0" style="stroke:red;" x1="900" y1="700" x2="700" y2="900" class="arrow" />
+
+<line id="CS201toCS102" stroke-width="0" style="stroke:red;" x1="700" y1="700" x2="500" y2="700" class="arrow" />
+
+<line id="CS211toCS102" stroke-width="0" style="stroke:red;" x1="700" y1="700" x2="500" y2="900" class="arrow" />
+
+<line id="ME206toME201" stroke-width="0" style="stroke:red;" x1="300" y1="700" x2="100" y2="700" class="arrow" />
+
+<line id="ROBOTtoME201" stroke-width="0" style="stroke:red;" x1="300" y1="700" x2="300" y2="100" class="arrow" />
+
+
+<circle onmouseover="joinnodes('SYSME')" onmouseleave="removenodes('SYSME')" id="SYSME" cx="700" cy="1100" r="50" stroke="black" fill="black" />
+<text id="TSYSME" onmouseover="tjoinnodes('TSYSME')" onmouseleave="tremovenodes('TSYSME')" x="700" y="1100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> SYSME </text>
+
+<circle onmouseover="joinnodes('ME111')" onmouseleave="removenodes('ME111')" id="ME111" cx="900" cy="1100" r="50" stroke="black" fill="black" />
+<text id="TME111" onmouseover="tjoinnodes('ME111')" onmouseleave="tremovenodes('ME111')" x="900" y="1100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ME111 </text>
+
+<circle onmouseover="joinnodes('ROBOT')" onmouseleave="removenodes('ROBOT')" id="ROBOT" cx="300" cy="100" r="50" stroke="black" fill="black" />
+<text id="TROBOT" onmouseover="tjoinnodes('TROBOT')" onmouseleave="tremovenodes('TROBOT')" x="300" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ROBOT </text>
+
+<circle onmouseover="joinnodes('IANNE')" onmouseleave="removenodes('IANNE')" id="IANNE" cx="100" cy="100" r="50" stroke="black" fill="black" />
+<text id="TIANNE" onmouseover="tjoinnodes('TIANNE')" onmouseleave="tremovenodes('TIANNE')" x="100" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> IANNE </text>
+
+<circle onmouseover="joinnodes('THELS')" onmouseleave="removenodes('THELS')" id="THELS" cx="100" cy="500" r="50" stroke="black" fill="black" />
+<text id="TTHELS" onmouseover="tjoinnodes('TTHELS')" onmouseleave="tremovenodes('TTHELS')" x="100" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> THELS </text>
+
+<circle onmouseover="joinnodes('ME206')" onmouseleave="removenodes('ME206')" id="ME206" cx="100" cy="700" r="50" stroke="black" fill="black" />
+<text id="TME206" onmouseover="tjoinnodes('TME206')" onmouseleave="tremovenodes('TME206')" x="100" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ME206 </text>
+
+<circle onmouseover="joinnodes('ALGEB')" onmouseleave="removenodes('ALGEB')" id="ALGEB" cx="100" cy="300" r="50" stroke="black" fill="black" />
+<text id="TALGEB" onmouseover="tjoinnodes('TALGEB')" onmouseleave="tremovenodes('TALGEB')" x="100" y="300" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ALGEB </text>
+
+<circle onmouseover="joinnodes('ASTRO')" onmouseleave="removenodes('ASTRO')" id="ASTRO" cx="500" cy="300" r="50" stroke="black" fill="black" />
+<text id="TASTRO" onmouseover="tjoinnodes('TASTRO')" onmouseleave="tremovenodes('TASTRO')" x="500" y="300" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ASTRO</text>
+
+<circle onmouseover="joinnodes('PH102')" onmouseleave="removenodes('PH102')" id="PH102" cx="500" cy="100" r="50" stroke="black" fill="black" />
+<text id="TPH102" onmouseover="tjoinnodes('TPH102')" onmouseleave="tremovenodes('TPH102')" x="500" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> PH102</text>
+
+<circle onmouseover="joinnodes('QUANT')" onmouseleave="removenodes('QUANT')" id="QUANT" cx="700" cy="100" r="50" stroke="black" fill="black" />
+<text id="TQUANT" onmouseover="tjoinnodes('TQUANT')" onmouseleave="tremovenodes('TQUANT')" x="700" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> QUANT</text>
+
+<circle onmouseover="joinnodes('PH101')" onmouseleave="removenodes('PH101')" id="PH101" cx="700" cy="300" r="50" stroke="black" fill="black" />
+<text id="TPH101" onmouseover="tjoinnodes('TPH101')" onmouseleave="tremovenodes('TPH101')" x="700" y="300" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> PH101</text>
+
+<circle onmouseover="joinnodes('FSFTR')" onmouseleave="removenodes('FSFTR')" id="FSFTR" cx="300" cy="500" r="50" stroke="black" fill="black" />
+<text id="TFSFTR" onmouseover="tjoinnodes('TFSFTR')" onmouseleave="tremovenodes('TFSFTR')" x="300" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> FSFTR</text>
+
+<circle onmouseover="joinnodes('ME201')" onmouseleave="removenodes('ME201')" id="ME201" cx="300" cy="700" r="50" stroke="black" fill="black" />
+<text id="TME201" onmouseover="tjoinnodes('TME201')" onmouseleave="tremovenodes('TME201')" x="300" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ME201</text>
+
+<circle onmouseover="joinnodes('MA102')" onmouseleave="removenodes('MA102')" id="MA102" cx="300" cy="300" r="50" stroke="black" fill="black" />
+<text id="TMA102" onmouseover="tjoinnodes('TMA102')" onmouseleave="tremovenodes('TMA102')" x="300" y="300" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> MA102</text>
+
+<circle onmouseover="joinnodes('MA101')" onmouseleave="removenodes('MA101')" id="MA101" cx="500" cy="500" r="50" stroke="black" fill="black" />
+<text id="TMA101" onmouseover="tjoinnodes('TMA101')" onmouseleave="tremovenodes('TMA101')" x="500" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> MA101</text>
+
+<circle onmouseover="joinnodes('DEELE')" onmouseleave="removenodes('DEELE')" id="DEELE" cx="700" cy="500" r="50" stroke="black" fill="black" />
+<text id="TDEELE" onmouseover="tjoinnodes('TDEELE')" onmouseleave="tremovenodes('TDEELE')" x="700" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> DEELE</text>
+
+<circle onmouseover="joinnodes('SEEMA')" onmouseleave="removenodes('SEEMA')" id="SEEMA" cx="900" cy="100" r="50" stroke="black" fill="black" />
+<text id="TSEEMA" onmouseover="tjoinnodes('TSEEMA')" onmouseleave="tremovenodes('TSEEMA')" x="900" y="100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> SEEMA</text>
+
+<circle onmouseover="joinnodes('CH101')" onmouseleave="removenodes('CH101')" id="CH101" cx="900" cy="300" r="50" stroke="black" fill="black" />
+<text id="TCH101" onmouseover="tjoinnodes('TCH101')" onmouseleave="tremovenodes('TCH101')" x="900" y="300" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CH101</text>
+
+<circle onmouseover="joinnodes('GRAPH')" onmouseleave="removenodes('GRAPH')" id="GRAPH" cx="900" cy="500" r="50" stroke="black" fill="black" />
+<text id="TGRAPH" onmouseover="tjoinnodes('TGRAPH')" onmouseleave="tremovenodes('TGRAPH')" x="900" y="500" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> GRAPH</text>
+
+<circle onmouseover="joinnodes('CS203')" onmouseleave="removenodes('CS203')" id="CS203" cx="900" cy="700" r="50" stroke="black" fill="black" />
+<text id="TCS203" onmouseover="tjoinnodes('TCS203')" onmouseleave="tremovenodes('TCS203')" x="900" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS203</text>
+
+<circle onmouseover="joinnodes('CS102')" onmouseleave="removenodes('CS102')" id="CS102" cx="700" cy="700" r="50" stroke="black" fill="black" />
+<text id="TCS102" onmouseover="tjoinnodes('TCS102')" onmouseleave="tremovenodes('TCS102')" x="700" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS102</text>
+
+<circle onmouseover="joinnodes('CS201')" onmouseleave="removenodes('CS201')" id="CS201" cx="500" cy="700" r="50" stroke="black" fill="black" />
+<text id="TCS201" onmouseover="tjoinnodes('TCS201')" onmouseleave="tremovenodes('TCS201')" x="500" y="700" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS201</text>
+
+<circle onmouseover="joinnodes('CS206')" onmouseleave="removenodes('CS206')" id="CS206" cx="700" cy="900" r="50" stroke="black" fill="black" />
+<text id="TCS206" onmouseover="tjoinnodes('TCS206')" onmouseleave="tremovenodes('TCS206')" x="700" y="900" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS206</text>
+
+<circle onmouseover="joinnodes('DESIN')" onmouseleave="removenodes('DESIN')" id="DESIN" cx="900" cy="900" r="50" stroke="black" fill="black" />
+<text id="TDESIN" onmouseover="tjoinnodes('TDESIN')" onmouseleave="tremovenodes('TDESIN')" x="900" y="900" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> DESIN</text>
+
+<circle onmouseover="joinnodes('CS211')" onmouseleave="removenodes('CS211')" id="CS211" cx="500" cy="900" r="50" stroke="black" fill="black" />
+<text id="TCS211" onmouseover="tjoinnodes('TCS211')" onmouseleave="tremovenodes('TCS211')" x="500" y="900" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> CS211</text>
+
+<circle onmouseover="joinnodes('ME203')" onmouseleave="removenodes('ME203')" id="ME203" cx="300" cy="900" r="50" stroke="black" fill="black" />
+<text id="TME203" onmouseover="tjoinnodes('TME203')" onmouseleave="tremovenodes('TME203')" x="300" y="900" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> ME203</text>
+
+<circle onmouseover="joinnodes('TURBO')" onmouseleave="removenodes('TURBO')" id="TURBO" cx="100" cy="1100" r="50" stroke="black" fill="black" />
+<text id="TTURBO" onmouseover="tjoinnodes('TTURBO')" onmouseleave="tremovenodes('TTURBO')" x="100" y="1100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> TURBO</text>
+
+<circle onmouseover="joinnodes('IPMAN')" onmouseleave="removenodes('IPMAN')" id="IPMAN" cx="100" cy="900" r="50" stroke="black" fill="black" />
+<text id="TIPMAN" onmouseover="tjoinnodes('TIPMAN')" onmouseleave="tremovenodes('TIPMAN')" x="100" y="900" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> IPMAN</text>
+
+<circle onmouseover="joinnodes('MHERO')" onmouseleave="removenodes('MHERO')" id="MHERO" cx="500" cy="1100" r="50" stroke="black" fill="black" />
+<text id="TMHERO" onmouseover="tjoinnodes('TMHERO')" onmouseleave="tremovenodes('TMHERO')" x="500" y="1100" alignment-baseline="middle" text-anchor="middle" font-family="Verdana" font-size="25" fill="yellow"> MHERO</text>
+
+<div id="ROBOTm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Robotics</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>2-0-2-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Process Management, Memory Management, Storage
+			Management, Protection and Security, Virtual Machines,
+			Distributed Systems
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS301</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ALGEBm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Algebraic codes and Combinatorics</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Syllabus: Algebraic codes: Definition and
+			motivation, parameters, parity check matrix of an
+			algebraic code, basic inequalities, Macwilliams'
+			identity, Perfect codes, Hamming codes, Golay
+			codes, cyclic codes, relation to factorisation of
+			X^{n}-1; MDS codes
+			Combinatorics: t-designs, Fischers inequality, Finite
+			projective planes, Bruck-Ryser theorem, extensions
+			of Witt designs, ovals in projective planes
+			Eigen value techniques in graph theory, expander
+			graphs, Ramanujan graphs
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS301</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ASTROm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Astrophysics for Engineers</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		1. a. An inventory of the Universe,
+			 b. Celestial sphere, Coordinates
+			 c. Units, sizes, masses and distance scale
+			2. Electromagnetic spectrum
+			 a. Radio, Microwave, Infrared, Optical, X-ray and
+			Gamma Ray
+			 b. Telescopes and Detectors
+			3. Stars
+			 A. General
+			 a. Sun, Planets, (Earth)
+			 b. Mass, Radius, Luminosity, Temperature,
+			Chemistry, Age and Types of stars
+			 c. Hertzsprung-Russell Diagram
+			 d. Birth and Evolution of stars
+			 c. Limits on Mass - Quantum mechanism at large
+			scale: Brown Dwarf
+			 B: Structure of a star:
+			 a. Virial Theorem (qualitative)
+			 b. Nuclear Energy, Pressure, Interaction with
+			radiation.
+			 c. Basic Equations of Stellar Structure
+			 d. Thermal Equilibrium, Radiation and Convection
+			- Schwarzchild Criterion
+			 e. Helioseismology
+			4. Galactic and Extragalactic Astronomy
+			 a. The Milky Way and Andromeda
+			 b. Rotation Curve - Dark Matter
+			 c. Structures within 500 mega light years
+			 d. Clusters of Galaxies, Superclusters, Filaments
+			and Voids
+			5. Special Topics:
+			 a. White Dwarf - Quantum Mechanics and
+			Gravitation: Chandrasekhar limit
+			 b. Supernova, Neutron Stars, (Pulsar astronomy),
+			 c. Black Holes, Gravitational Wave Astronomy
+			 d. Gamma Ray Burst
+			 e. Quasars and Active Galactic Nuclei 
+			68
+			6. Topics in Cosmology
+			a. Hubble Expansion - Cosmic Distance Scale - Age
+			of the Universe
+			b. Standard Model of Cosmology
+			c. Cosmic Microwave Background
+			d. Supernova Cosmology Project and Dark Energy
+			e. Gravitational Lens
+			7. Major Astronomical facilities where India is
+			involved:
+			 GMRT, SKA, Thirty Metre Telescope, LIGO,
+			ASTROSAT
+			8. Open questions in Astrophysics and Cosmology
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: PH102 & PH101</h2>
+    </div>
+  </div>
+</div>
+
+<div id="QUANTm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Quantum Computation</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>2-1-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Introduction to Classical Computation: The Turing
+			Machine –The Church-Turing thesis, Universal
+			Turing Machine, Probabilistic Turing machine;
+			Circuit model of computation – Binary arithmetics,
+			Elementary logic gates, Universal classical
+			computation; Computational complexity –
+			Complexity classes, Chernoff bound; Energy and
+			information – Maxwell’s demon, Landauer’s
+			principle, Extracting work from information;
+			Reversible computation – Toffoli and Fredkin gates,
+			billiard ball computer.
+			Framework of Quantum Mechanics: The Dirac
+			notation and Hilbert Space, Dual Vectors, Operators,
+			Spectral Theorem, Functions of operators, Tensor
+			Products, Schmidt Decomposition theorem; The state
+			of quantum system, time-evolution of a closed
+			system; composite systems, measurement, mixed
+			states and general quantum operations.
+			Quantum Computation: The quantum circuit model,
+			Quantum Gates – 1-qubit gates, Controlled-U gates;
+			Universal Sets of Quantum Gates, Implementing
+			measurements with quantum circuits.
+			Quantum communications: Super dense coding,
+			Quantum Teleportation.
+			Quantum Algorithms: Probabilistic versus quantum
+			algorithms, Phase Kick-Back, Deutsch algorithm,
+			Deutsch-Jozsa Algorithm, Simon’s Algorithm,
+			Grover’s quantum search Algorithm.
+			Quantum computational Complexity Theory and
+			lower bounds: computational complexity, Black-Box
+			Model, General Black-box lower Bounds, Polynomial
+			Methods, Block Sensitivity.
+			Quantum Error Corrections: Classical error
+			corrections – The error model, encoding, error
+			recovery, Fault tolerance, Quantum error correction, 
+			70
+			Three- and nine-qubit quantum codes, Fault tolerant
+			quantum computation.
+			Quantum Computation with physics systems
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: MA102 & PH101</h2>
+    </div>
+  </div>
+</div>
+
+<div id="FSFTRm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Fourier series and Fourier transforms</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Notion of Fourier series: definition and examples,
+			trignometric polynomials, various notion of
+			convergence. Convolution: Dirichlet kernel and
+			approximation identities, Fejer's summation,
+			Plancherel and Parseval's theorems, $L^2$
+			convergence, orthonomal basis.
+			Application of fourier series: isoperimetric inequality
+			and Weyl's equidistribution theorem.Fourier
+			transform: definition and examples, character theory,
+			Schwartz functions, fourier inversion formula,
+			Plancherel theorem, fourier tranform on euclidean
+			spaces, introduction to the theory of distributions,
+			poisson summation formula, zeta and theta
+			functions.Applications of fourier transform: analytic
+			properties of Riemann zeta function, poisson kernel
+			and heat equations, partial differential equations,
+			Heiseinberg's uncertainity principle.equations, partial
+			differential equations, Heiseinberg's uncertainity
+			principle.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: MA102 & MA101</h2>
+    </div>
+  </div>
+</div>
+
+<div id="SEEMAm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Sustainable energy and energy materials</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Fuel cells, catalysis for fuel cells and sustainable
+			chemical processes • Batteries • Solar photovoltaics
+			Wind power: practical aspects • Tidal power •
+			Inorganic, Organic and functional biomaterials as
+			energy materials 
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CH101</h2>
+    </div>
+  </div>
+</div>
+
+<div id="GRAPHm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Sustainable energy and energy materials</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Fundamentals of graph theory. Topics include: connectivity,
+			planarity, perfect graphs, coloring, matchings and extremal
+			problems.
+			Basic concepts in Combinatorics. Topics include: counting
+			techniques, inclusion-exclusion principles, permutations,
+			combinations and pigeon-hole principle.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS203</h2>
+    </div>
+  </div>
+</div>
+
+<div id="DEELEm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Deep Learning</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Introductory Concepts of DNN
+			(a) Linear regression, logistic regression – penultimate layers
+			of a neural network
+			(b) Dealing with nonlinearity – Kernal Trick
+			(c) Data-driven kernel learning using NNs
+			DNN Training
+			(a) Issues in training practical deep networks,
+			Vanishing/Exploding gradients
+			(b) Regularization for Deep Learning – Early stopping,
+			weight regularization, activity regularization, dropout
+			(c) Optimization methods for training deep networks –
+			Stochastic gradient descent, rmsprop, adam
+			(d) Convolutional Neural networks
+			Sequence Modeling
+			(a) Recurrent neural networks
+			(b) LSTMs ans BLSTMs
+			Unsupervised Learning
+			(a) Autoendcoders
+			(b) Variational autoencoders
+			(c) Generative adversial networks (GANs)
+			(d) Representation learning and feature extraction
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: MA101, MA102 & Exposure to Probability, Random Processes, Ability to code in Python</h2>
+    </div>
+  </div>
+</div>
+
+<div id="IANNEm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Introduction to Artificial Neural Networks</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Background to ANN and PDP models; Basics of
+			ANN including terminology, topology and learning
+			laws; (4 lectures)
+			Analysis of Feedforward neural networks (FFNN)
+			including linear associative networks, perceptron
+			network, multilayer perceptron, gradient descent
+			methods and backpropagation learning; (8 lectures)
+			Analysis of Feedback neural networks (FBNN)
+			including Hopfield model, state transition diagram,
+			stochastic networks, Boltzmann learning law; (8
+			lectures)
+			Evolution of ANN architectures - from learning to
+			deep learning: (1 lecture)
+
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="DESINm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Topics in Design and Analysis of Algorithms</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Module 1: Iterated Improvement ParadigmsComputational
+			and Algorithmic Thinking, Matching
+			Algorithms, Flow Algorithms (16 hours).
+			Module 2: Approximation Algorithms- Greedy
+			Approximation, Local Search, Linear Programming,
+			Duality Techniques (16 hours)
+			Module 3: Randomized Algorithms- Monte Carlo and Las
+			Ve-gas types, Randomized Attrition, Randomized Incremental
+			Design, Sampling, Chernoff type bounds and
+			High Confidence Analysis, Abundance of witness for
+			Monte Carlo algorithms, Number theoretic Algorithms (16
+			hours).
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS203, CS201 & CS206</h2>
+    </div>
+  </div>
+</div>
+
+<div id="SYSMEm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Synthesis of Mechanisms </h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>VI</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		 Planar mechanisms and geometry of motion:
+			Definition, Basic concepts, classification of links and
+			pairs, Mechanisms, Machine and Inversions,
+			Grashof’s Law, Transmission of torque and force in
+			mechanisms, Mobility, Degree of freedom (DOF),
+			Grübler criterion, DOF permitted by turning and
+			sliding, Equivalent mechanisms, Unique
+			mechanisms.
+			 Number synthesis: DOF and effect of odd and even
+			number of links, Minimum number of binary links in
+			a mechanism Possibility of minimum number of
+			turning pairs in a mechanism, Enumeration of
+			kinematic chain, DOF of spatial mechanisms.
+			 Synthesis of linkages: Type, number and
+			dimensional synthesis, Precision points, structural
+			error, Chebyshev spacing. Poles and relative poles.
+			 Graphical method for synthesis – Motion
+			generation, Path generation, Function generation,
+			Overlay method.
+			 Analytical method for synthesis – Freudenstein’s
+			equation, Loop closure technique, Bloch’s method of
+			synthesis, Order synthesis.
+			 Coupler curves: Equation of coupler curves,
+			Synthesis for path generation, Robert-Chebyshev
+			theorem (cognate linkages)
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: ME111</h2>
+    </div>
+  </div>
+</div>
+
+<div id="THELSm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Theory of Elasticity</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>VI</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		 Analysis of Stress: Stress tensors. Cauchy's stress
+			principle, direction cosines, stress components on an
+			arbitrary plane with stress transformation. Principal
+			stresses in three dimensions, stress invariants, Equilibrium
+			equations, Octahedral stresses, Mohr's stress circle:
+			Construction of Mohr Circle for two and three
+			dimensional stress systems, Equilibrium equations in polar
+			coordinates for two-dimensional state of stresses. General
+			state of stress in 3D in cylindrical coordinate System.
+			 Analysis of Strain: types of strain, strain tensors, strain
+			transformation. Principal strains, strain invariants,
+			octahedral strains, Mohr's Circle for Strain, Equations of
+			Compatibility for Strain, Navier’s
+			 Stress-strain relations: Stress-strain relations,
+			Generalized Hooke's law, Lame’s displacement equations
+			of equilibrium, transformation of compatibility condition
+			from Strain components to stress components (BeltramiMichell
+			compatibility relation). Strain energy in an elastic
+			body, General theorems: St. Venant's principle,
+			Superposition Principle, Uniqueness theorem, Reciprocal
+			theorem.
+			 2D problems in Cartesian coordinate system: plane
+			stress and plane strain problems. Stress function, Solution
+			of two-dimensional problems with different loading
+			conditions by the use of polynomials. Solution of twodimensional
+			problems with different loading conditions by
+			the use of Fourier method.
+			 2D problems in Polar coordinate system: Straindisplacement
+			relations, compatibility equation, stress-
+			83
+			strain relations, stress function and Biharmonic equation.
+			General solution in Polar coordinates (Michell solution),
+			Polar coordinate solutions: Stress concentration, effect of
+			circular holes on stress distribution in plates, Half-space
+			problems - Flamant solution, Hertz disk solution, Wedge
+			problems. Axisymmetric problems, thick-walled
+			cylinders, rotating disks of uniform and variable thickness
+			 Torsion of prismatic bars: General solution of the torsion
+			problem – St. Venant’s semi-inverse approach, Prandtl’s
+			stress function, torsion of circular, elliptic, equilateral
+			triangle cross sections. Solution by Fourier method:
+			Rectangular section, Prandtl's membrane analogy, torsion
+			of thin walled and multiple cell closed sections.
+			 Thermal Stresses: Thermoelastic Stress–Strain
+			Relations, Equations of Equilibrium, Strain–Displacement
+			Relations, Thin Circular Disk: Temperature Symmetrical
+			about Centre, Long Circular Cylinder
+			 Introduction to 3D problems: Papkovich–Neuber
+			potential representations for 3D Solutions for Isotropic
+			Solids, Demonstration that Papkovich–Neuber solution
+			satisfies the governing equations, Point Force in an Infinite
+			Solid, Stretching of bar under its weight
+
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: ME206</h2>
+    </div>
+  </div>
+</div>
+
+<div id="TURBOm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Introduction to Turbulence and its Modelling</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>VI</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		 Introduction to Turbulence: Nature of turbulence,
+			origin of turbulence, laminar and turbulent boundary
+			layers, diffusion of turbulence, concept of eddy
+			viscosity
+			 Statistics of Turbulence: Statistical aspects of
+			turbulence, scales in turbulence, spectrum of
+			turbulence, energy cascade in isotropic turbulence,
+			Kolmogorov hypotheses
+			 Mathematical Theory of Turbulence: The Reynolds
+			equation, Reynolds decomposition, equations for the
+			mean flow, Reynolds stress, mixing length model,
+			turbulent heat transfer, limitations of mixing length
+			theory
+			 Dynamics of Turbulence: Dynamics of turbulence,
+			Taylor microscale, Reynolds stress and vorticity, the
+			vorticity equation
+			 Boundary-free and Wall-bounded Turbulence:
+			Turbulent wakes, turbulent jets and mixing layers,
+			turbulent flows in pipes and channels, experimental
+			techniques for turbulence characteristics
+			 Introduction to Turbulence Modelling: Turbulence
+			modelling and closure problem, algebraic models,
+			modern variants of the mixing length model, one
+			equation models, k- and k- models, Spalart–
+			Allmaras turbulence model
+			 Introduction to Numerical Techniques for
+			Turbulence: Direct numerical simulations (DNS),
+			large eddy simulations (LES) and Reynolds averaged
+			Navier-Stokes (RANS) modelling techniques, 
+			86
+			spectral methods and particle based methods for
+			turbulence
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: ME203</h2>
+    </div>
+  </div>
+</div>
+
+<div id="MHEROm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Modernism and the ‘Hero’</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>VI</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Fiction/Non-Fiction of Franz Kafka, Albert Camus,
+			Saadat Hasan Manto, Samuel Beckett, among others.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="IPMANm" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Intellectual Property Management</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Elective course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>VI</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Historical Development of Intellectual Property in
+			Industrialised Society, Patent Basics, Patent Systems
+			around the world, Application of patents in different
+			technology areas including Software and Business
+			Methods, How to read a Patent, Introduction to Patent
+			Databases and Analysis Tools, Patent Searching and
+			Analysis, Use of Patent Information for Research and
+			Business Planning, Introduction to TRIZ , Evaluation
+			of Patents, IPR Beyond Patents ( Copyright, Trade
+			Marks, Designs and other forms of IP rights), IP
+			Management including IP Strategy for Start-ups and
+			Corporates , IP Licensing, IP Acquisition and
+			Enforcement, Case studies and Tutorial.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="PH102m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>PH102 Electricity and Magnetism</h2>
+    </div>
+    <div class="modal-body">
+      <table class="otable">
+        <col width="30%">
+      <tr>
+        <td>Credits</td>
+        <td>2-1-0-6</td>
+      </tr>
+      <tr>
+        <td>Type of Course</td>
+        <td>Core Course</td>
+      </tr>
+      <tr>
+        <td>Semester in which normally to be offered</td>
+        <td>Spring</td>
+      </tr>
+      <tr>
+        <td>Full or Half Course</td>
+        <td>Full</td>
+      </tr>
+      <tr>
+        <td>Course Content</td>
+        <td>
+           Review of vector calculus: Spherical polar and
+          cylindrical coordinates; gradient, divergence and
+          curl;
+           Divergence and Stokes` theorems;
+           Divergence and curl of electric field, Electric
+          potential, properties of conductors;
+           Poisson’s and Laplace’s equations, uniqueness
+          theorems, boundary value problems, separation of
+          variables, method of images, multipoles;
+           Polarization and bound charges, Gauss` law in the
+          presence of dielectrics, Electric displacement D
+          and boundary conditions, linear dielectrics;
+           Divergence and curl of magnetic field, Vector
+          potential and its applications;
+           Magnetization, bound currents, Ampere`s law in
+          magnetic materials, Magnetic field H, boundary
+          conditions, classification of magnetic materials;
+           Faraday’s law in integral and differential forms,
+          Motional emf, Energy in magnetic fields,
+          Displacement current, Maxwell’s equations,
+           Electromagnetic (EM) waves in vacuum and
+          media, Energy and momentum of EM waves,
+          Poynting`s theorem;
+           Reflection and transmission of EM waves across
+          linear media
+    </td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="MA102m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>MA 102 Linear Algebra</h2>
+    </div>
+    <div class="modal-body">
+      <table class="otable">
+        <col width="30%">
+      <tr>
+        <td>Credits</td>
+        <td>3-1-0-4</td>
+      </tr>
+      <tr>
+        <td>Type of Course</td>
+        <td>Core Course</td>
+      </tr>
+      <tr>
+        <td>Semester in which normally to be offered</td>
+        <td>Spring</td>
+      </tr>
+      <tr>
+        <td>Full or Half Course</td>
+        <td>Half</td>
+      </tr>
+      <tr>
+        <td>Course Content</td>
+        <td>
+          Vectors in Rn
+		, notion of linear independence and
+		dependence, linear span of a set of vectors, vector
+		subspaces of Rn
+		, basis of a vector subspace. Systems of
+		linear equations, matrices and Gauss elimination, row
+		space, null space, and column space, rank of a matrix.
+		Determinants and rank of a matrix in terms of
+		determinants. Abstract vector spaces, linear
+		transformations, matrix of a linear transformation,
+		change of basis and similarity, rank-nullity theorem.
+		Inner product spaces, Gram-Schmidt process,
+		orthonormal bases, projections and least squares
+		approximation. Eigenvalues and eigenvectors,
+		characteristic polynomials, eigenvalues of special
+		matrices (orthogonal, unitary, hermitian, symmetric,
+		skew-symmetric, normal). Algebraic and geometric
+		multiplicity, diagonalization by similarity
+		transformations, spectral theorem for real symmetric
+		matrices, application to quadratic forms.
+    </td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="PH101m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>PH101 Quantum Physics and Applications</h2>
+    </div>
+    <div class="modal-body">
+      <table class="otable">
+        <col width="30%">
+      <tr>
+        <td>Credits</td>
+        <td>2-1-0-6</td>
+      </tr>
+      <tr>
+        <td>Type of Course</td>
+        <td>Core Course</td>
+      </tr>
+      <tr>
+        <td>Semester in which normally to be offered</td>
+        <td>Autumn</td>
+      </tr>
+      <tr>
+        <td>Full or Half Course</td>
+        <td>Full</td>
+      </tr>
+      <tr>
+        <td>Course Content</td>
+        <td>
+          • Quantum nature of light: Photoelectric Effect and Compton Effect. 
+          • Stability of atoms and Bohr`s rules. 
+          • Wave particle duality: De Broglie wavelength, Group and Phase velocity, Uncertainty Principle, Double Slit Experiment. 
+          • Schrödinger Equation. 
+          • Physical interpretation of Wave Function, Elementary Idea of Operators, Eigen-value Problem. 
+          • Solution of Schrödinger equation for simple boundary value problems. 
+          • Reflection and Transmission Coefficients. Tunneling. 
+          • Particle in a three dimensional box, Degenerate states. 
+          • Exposure to Harmonic Oscillator and Hydrogen Atom without deriving the general solution. 
+          • Quantum Statistics: Maxwell Boltzmann, Bose Einstein and Fermi Dirac Statistics by detailed balance arguments. 
+          • Density of states. 
+          • Applications of B-E statistics: Lasers. Bose-Einstein Condensation. 
+          • Applications of F-D statistics: Free electron model of electrons in metals. Concept of Fermi Energy. 
+          • Elementary Ideas of Band Theory of Solids. 
+          • Exposure to Semiconductors, Superconductors, Quantum Communication and Quantum Computing.
+    </td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CH101m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CH101 Chemistry for Engineers: Fundamental concepts and Applications</h2>
+    </div>
+    <div class="modal-body">
+      <table class="otable">
+        <col width="30%">
+      <tr>
+        <td>Credits</td>
+        <td>3-1-0-8</td>
+      </tr>
+      <tr>
+        <td>Type of Course</td>
+        <td>Core Course</td>
+      </tr>
+      <tr>
+        <td>Semester in which normally to be offered</td>
+        <td>Spring</td>
+      </tr>
+      <tr>
+        <td>Full or Half Course</td>
+        <td>Full</td>
+      </tr>
+      <tr>
+        <td>Course Content</td>
+        <td>
+          Organic and Inorganic
+          (Inorganic): a. Harness the power of periodic table 
+          Periodic properties: trends in size, electron affinity, ionization potential and electronegativity • Role of chemical elements in water contamination • Hardness of water • Desalination of brackish and sea water • Role of silicon in semiconducting applications • metal atom (Cu, Au, Pt, Pd etc.) based nanoparticles 
+          b. Coordination complexes
+          Transition metal chemistry: inorganic complexes, bonding theories, magnetism, bonding aspects and structural distortion
+          (Organic): a. M.O. theory and π-conjugated compounds
+          Molecular orbitals of common functional groups, Qualitative Huckel MOs of conjugated polyenes and benzene. Aromaticity. Configuration, molecular chirality and isomerism, Conformation of alkanes and cycloalkanes 
+          b. Polymers
+          Types and classification of polymers • polymerization techniques • Structure-property relationships of polymers • Conducting polymers
+          Physical Chemistry:
+          a. Quantum chemistry
+          Schrodinger equation, Origin of quantization, Born interpretation of wave function, Hydrogen atom: solution to -part, Atomic orbitals, many electron atoms and spin orbitals. Chemical bonding: MO theory: LCAO molecular orbitals, Structure, bonding and energy levels of diatomic molecules. Concept of sp, sp2 and sp3 hybridization; Bonding and shape of many atom molecules; Intermolecular Forces; Potential energy Surfaces-Rates of reactions; Steady state approximation and its applications; Concept of pre-equilibrium; Equilibrium and related thermodynamic quantities
+          b. Electrochemistry 
+          Electrochemical cells and Galvanic cells • EMF of a cell • Single electrode potential • Nernst equation • Electrochemical series • Types of electrodes • Reference electrodes • Batteries • Modern batteries • Fuel cells • corrosion 
+    </td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="MA101m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>MA101 Chemistry for Engineers: Fundamental concepts and Applications</h2>
+    </div>
+    <div class="modal-body">
+      <table class="otable">
+        <col width="30%">
+      <tr>
+        <td>Credits</td>
+        <td>3-1-0-8</td>
+      </tr>
+      <tr>
+        <td>Type of Course</td>
+        <td>Core Course</td>
+      </tr>
+      <tr>
+        <td>Semester in which normally to be offered</td>
+        <td>Autumn</td>
+      </tr>
+      <tr>
+        <td>Full or Half Course</td>
+        <td>Full</td>
+      </tr>
+      <tr>
+        <td>Course Content</td>
+        <td>
+          Review of limits, continuity, differentiability. Mean value theorem, Taylors Theorem, Maxima and Minima. Riemann integrals, Fundamental theorem of Calculus, Improper integrals, applications to area, volume. Convergence of sequences and series, power series. Partial Derivatives, gradient and directional derivatives, chain rule, maxima and minima, Lagrange multipliers. Double and Triple integration, Jacobians and change of variables formula. Parametrization of curves and surfaces, vector fields, line and surface integrals. Divergence and curl, Theorems of Green, Gauss, and Stokes.
+    </td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ME206m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>ME206 Mechanics of Materials</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-1-0-8</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		 Mechanics of material approach – axial forces, thin
+			cylinders and spheres, simple (direct) shear, torsion of
+			circular cross-section shafts; Beam bending – Euler –
+			Bernoulli model, deflections, normal and shear stresses.
+			Statically indeterminate problems in bending.
+			Unsymmetrical bending problems. Combined stresses,
+			Mohr’s circle diagram for stress and principal stresses.
+			Theories of failure.
+			 Experimental methods of stress analysis – strain
+			gages, strain rosettes and photo elasticity.
+			 Theory of elasticity approach – equilibrium equations,
+			strain displacement relation, plane stress and plane
+			strain, stresses in thick cylinders.
+			 Energy methods – Castigliano’s theorem and its
+			applications. Potential energy methods and applications.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: ME201</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ME201m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>ME201 Engineering Mechanics</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>2-1-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Module 1: Introduction to Engineering Mechanics covering, Force Systems Basic concepts, Particle equilibrium in 2-D & 3-D; Rigid Body equilibrium; System of Forces, Coplanar Concurrent Forces, Components in Space – Resultant- Moment of Forces and its Application; Couples and Resultant of Force System, Equilibrium of System of Forces, Free body diagrams, Equations of Equilibrium of Coplanar Systems and Spatial Systems; Static Indeterminacy
+			Module 2: Friction covering, Types of friction, Limiting friction, Laws of Friction, Static and Dynamic Friction; Motion of Bodies, wedge friction, screw jack & differential screw jack;
+			Module 3: Basic Structural Analysis covering, Equilibrium in three dimensions; Method of Sections; Method of Joints; How to determine if a member is in tension or compression; Simple Trusses; Zero force members; Beams & types of beams; Frames & Machines;
+			Module 4: Centroid and Centre of Gravity covering, Centroid of simple figures from first principle, centroid of composite sections; Centre of Gravity and its implications; Area moment of inertia- Definition, Moment of inertia of plane sections from first principles, Theorems of moment of inertia, Moment of inertia of standard sections and composite sections; Mass moment inertia of circular plate, Cylinder, Cone, Sphere, Hook;
+			Module 5: Virtual Work and Energy Method- Virtual displacements, principle of virtual work for particle and ideal system of rigid bodies, degrees of freedom. Active force diagram, systems with friction, mechanical efficiency. Conservative forces and potential energy (elastic and gravitational), energy equation for equilibrium. Applications of energy method for equilibrium. Stability of equilibrium.
+			Module 6: Particles dynamics- 
+			Kinematics of Particles: 
+			Rectilinear motion, Plane curvilinear motion - rectangular coordinates, normal and tangential coordinates, polar coordinates, Space curvilinear - cylindrical, spherical (coordinates), Relative and Constrained motion.
+			Kinetics of Particles: 
+			Force, mass and acceleration – rectilinear and curvilinear motion, work and energy, impulse and momentum – linear and angular; Impact – Direct and Oblique.
+			Kinetics of System of Particles: 
+			Generalized Newton’s Second Law, Work-Energy, Impulse-Momentum, Conservation of Energy and Momentum 
+			Module 7: Introduction to Rigid body dynamics
+			Kinematics of Planar Rigid Bodies: 
+			Equations for rotation of a rigid body about a fixed axis, General plane motion, Instantaneous Center of Rotation in Plane Motion Plane Motion of a Particle Relative to a Rotating Frame. Coriolis Acceleration
+			Kinetics of Planar Rigid Bodies: 
+			Equations of Motion for a Rigid Body, Angular Momentum of a Rigid Body in Plane Motion, Plane Motion of a Rigid Body and D’Alembert’s Principle, Systems of Rigid Bodies, Constrained Plane Motion; Energy and Work of Forces Acting on a Rigid Body, Kinetic Energy of a Rigid Body in Plane Motion, Systems of Rigid Bodies, Conservation of Energy, Plane Motion of a Rigid Body - Impulse and Momentum, Systems of Rigid Bodies, Conservation of Angular Momentum.
+			Module 8: Mechanical Vibrations covering, Basic terminology, free and forced vibrations, resonance and its effects; Degree of freedom; Derivation for frequency and amplitude of free vibrations without damping and single degree of freedom system, simple problems, types of pendulum, use of simple, compound and torsion pendulums
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: ME111</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ME203m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>ME203 Fluid Mechanics</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-1-8</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		<b>Introduction:</b> Scope, definition of fluid, fluid as continuum, fluid properties: density, specific weight, specific gravity, viscosity, kinematic viscosity, classification of fluid motion<br>
+			<b>Fluid Statics:</b> Pressure at a point, basic equation for pressure field, pressure variation (fluid at rest): incompressible and compressible fluid, standard atmosphere, Measurement of pressure: manometry, Hydrostatic Force on a plane and curve surface, pressure prism, Buoyancy, flotation and stability, pressure variation in a fluid with rigid body motion – linear motion, rigid body rotation.<br>
+			<b>Elementary Fluid Dynamics:</b> Newton’s second law along and normal to a streamline, physical interpretation, static, stagnation pressure, Use of Bernoulli Eq.: free jets, confined flows, restrictions on the use of Bernoulli Eq.: compressibility effects, unsteady effects, rotational effects and others.
+			<b>Fluid Kinematics:</b> The velocity field: Eulerian and Lagrangian flow descriptions, 1D, 2D and 3D flows, steady and unsteady flows, streamlines, streaklines and pathlines. Acceleration field: material derivative, unsteady and convective effects. Control volume and system representation: Reynolds Transport Theorem, physical interpretation, steady, unsteady effects, moving control volume.<br>
+			<b>Integral approach:</b> Conservation of mass: derivation of continuity, fixed, non-deforming control volume, moving non-deforming control volume, deforming control volume. Conservation of momentum: linear momentum and moment of momentum equation and their application. First law of thermodynamics: derivation & application of energy Eq., comparison of energy equation with Bernoulli’s equation, application of energy equation to non-uniform flows, combination of energy equation and moment of momentum equation.<br>
+			<b>Differential approach:</b> linear motion and deformation, angular motion and deformation, Conservation of mass: differential form of continuity equation, stream function, Conservation of linear momentum: description of forces acting on the differential element, equations of motion, Inviscid Flow:  Euler’s equation of motion, the Bernoulli’s equation, Irrotational flow, Bernoulli equation for irrotational flow, the velocity potential, flow net.<br>
+			<b>Viscous flow:</b> Stress deformation relationships, Navier-Stokes Eqs., Simple solutions for viscous compressible fluids: parallel flow through straight channel, Couette, plane Poiseuille, Hagen- Poiseuille, flow betn. two co-axial cylinders.
+			<b>Dimensional analysis and modelling:</b> Importance of dimensional analysis, Buckingham’s Pi Theorem, Dimensionless groups, Dimensional analysis through governing differential equations<br>
+			<b>Viscous Flow in Pipes:</b> General characteristics of pipe flow – laminar or turbulent flow, entrance region and fully developed flow, pressure and shear stress. Fully Developed Turbulent Flow – transition from laminar to turbulent flow, turbulent shear stress, turbulent velocity profile. Moody chart, minor losses, non-circular conduits, single pipes and multiple pipe systems, Pipe Flow rate measurement.<br>
+			<b>Flow Over Immersed Bodies:</b> Boundary layer characteristics: boundary layer structure and thickness on a flat plate, Blasius boundary layer, momentum integral boundary layer equation for a flat plate, transition from laminar to turbulent, momentum integral boundary layer equation for a flat plate, turbulent boundary layer flow.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="ME111m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>ME111 Engineering Graphics Lab</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>1-0-3-5</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		<b>Engineering Graphics with mini-drafter:</b> Around half a semester and bit more with following topics to be covered.<br>
+			•	Introduction to Engineering Graphics <br>
+			•	Curves<br>
+			•	Projections of Points<br>
+			•	Projection of Lines<br>
+			•	Projection of Planes<br>
+			•	Projections on Auxiliary Planes<br>
+			•	Projections of Solids<br>
+			•	Sections of Solids<br>
+			•	Intersections of Solids<br>
+			<b>Engineering Graphics with 2D Drafting Software:</b> 5 weekly computer laboratory sessions covering above using AutoCAD® as a drafting software, 5th session on Isometric Projections.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CS201m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS201 Data Structures and Algorithms </h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		<b>Introduction:</b> data structures, abstract data types, analysis of algorithms.<br>
+			<b>Creation and manipulation of data structures:</b> arrays, lists, stacks, queues, trees, heaps, hash tables, balanced trees, tries, graphs. Algorithms for sorting and searching, order statistics, depth-first and breadth-first search, shortest paths and minimum spanning tree.
+
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS102</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CS102m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS102 Computer Programming and Utilization</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-2-8</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		This course provides an introduction to problem solving with computers using a modern language such as Java or C/C++. Topics covered will include:Utilization: Developer fundamentals such as editor, integrated programming environment, Unix shell, modules, libraries. Programming features: Machine representation, primitive types, arrays and records, objects, expressions, control statements,iteration, procedures, functions, and basic i/o. Applications: Sample problems in engineering, science, text processing,and numerical methods.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CS203m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS203 Discrete Structures</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		There are four modules in the course:<br>
+		<b>1) Proofs and structures</b>
+      Introduction, propositions, predicates, examples of theorems and proofs, types of proof techniques, Axioms, Mathematical Induction, Well-ordering principle, Strong Induction, Sets, Russell’s paradox, infinite sets, functions, Countable and uncountable sets, Cantor’s diagonalization technique, Relations, Equivalence relations, partitions of a set.<br>
+      <b>2) Counting and Combinatorics</b>
+     Permutations, combinations, binomial theorem, pigeon hole principle, principles of inclusion and exclusion, double counting. Recurrence relations, solving recurrence relations.<br>
+      <b>3) Elements of graph theory</b>
+     Graph models, representations, connectivity, Euler and Hamiltonian paths, planar graphs, Trees and tree traversals.<br>
+      <b>4) Introduction to abstract algebra and number theory</b>
+       Semigroups, monoids, groups, homomorphisms, normal subgroups, congruence relations. Ceiling, floor functions, divisibility. Modular arithmetic, prime numbers, primality theorems.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: NILL</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CS211m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS211 Data Structures and Algorithms Laboratory</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>0-0-3-3</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Autumn</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Lab course for CS 211 is based on creating and manipulating various data structures and implementation of algorithms.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS102</h2>
+    </div>
+  </div>
+</div>
+
+<div id="CS206m" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CS206 Design and Analysis of Algorithms</h2>
+    </div>
+    <div class="modal-body">
+      <table>
+      	<col width="30%">
+      <tr>
+      	<td>Credits</td>
+      	<td>3-0-0-6</td>
+      </tr>
+      <tr>
+      	<td>Type of Course</td>
+      	<td>Core Course</td>
+      </tr>
+      <tr>
+      	<td>Semester in which normally to be offered</td>
+      	<td>Spring</td>
+      </tr>
+      <tr>
+      	<td>Full or Half Course</td>
+      	<td>Full</td>
+      </tr>
+      <tr>
+      	<td>Course Content</td>
+      	<td>
+      		Syllabus is divided roughly 8 modules; each module roughly
+			takes two weeks.<br>
+			Module 1: Introduction Examples and motivation.
+			Asymptotic complexity: informal concepts, formal notation,
+			examples<br>
+			Module 2: Searching in list: binary search, Sorting: insertion
+			sort, selection sort, merge sort, quicksort, stability and other
+			issues.<br>
+			Module 3: Divide and conquer: binary search, recurrence
+			relations. nearest pair of points, merge sort, integer
+			multiplication, matrix multiplication.<br>
+			Module 4: Graphs: Motivation, BFS, DFS, DFS numbering
+			and applications, directed acyclic graphs, directed acyclic
+			graphs, Shortest paths: unweighted and weighted, Single
+			source shortest paths: Dijkstra, Minimum cost spanning
+			trees: Prim’s algorithm, Kruskal’s Algorithm<br>
+			Module 5: Union-Find data structure, Priority queues, heaps.
+			Heap sort. Dijstra/Prims revisited using heaps, Search Trees:
+			Introduction Traversals, insertions, deletions Balancing<br>
+			Module 6: Greedy algorithms: Greedy: Interval scheduling,
+			Proof strategies, Huffman coding.<br>
+			Module 7: Dynamic Programming: weighted interval
+			scheduling, memoization, edit distance, longest ascending
+			subsequence. matrix multiplication, shortest paths: Bellman
+			Ford, shortest paths: Floyd Warshall<br>
+			Module 8: Intractability: NP completeness, reductions,
+			examples, Misc topics.
+		</td>
+      </tr>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <h2>Prerequisites: CS102, CS210, CS211, CS203</h2>
+    </div>
+  </div>
+</div>
+
+</svg>
+
+<script type="text/javascript">
+var mrobot = document.getElementById('ROBOTm');
+var brobot = document.getElementById("ROBOT");
+var tbrobot = document.getElementById("TROBOT");
+var srobot = document.getElementsByClassName("close")[0];
+brobot.onclick = function() {
+    mrobot.style.display = "block";
+}
+tbrobot.onclick = function() {
+    mrobot.style.display = "block";
+}
+srobot.onclick = function() {
+    mrobot.style.display = "none";
+}
+
+var malgeb = document.getElementById('ALGEBm');
+var balgeb = document.getElementById("ALGEB");
+var tbalgeb = document.getElementById("TALGEB");
+var salgeb = document.getElementsByClassName("close")[1];
+balgeb.onclick = function() {
+    malgeb.style.display = "block";
+}
+tbalgeb.onclick = function() {
+    malgeb.style.display = "block";
+}
+salgeb.onclick = function() {
+    malgeb.style.display = "none";
+}
+
+var mastro = document.getElementById('ASTROm');
+var bastro = document.getElementById("ASTRO");
+var tbastro = document.getElementById("TASTRO");
+var sastro = document.getElementsByClassName("close")[2];
+bastro.onclick = function() {
+    mastro.style.display = "block";
+}
+tbastro.onclick = function() {
+    mastro.style.display = "block";
+}
+sastro.onclick = function() {
+    mastro.style.display = "none";
+}
+
+var mquant = document.getElementById('QUANTm');
+var bquant = document.getElementById("QUANT");
+var tbquant = document.getElementById("TQUANT");
+var squant = document.getElementsByClassName("close")[3];
+bquant.onclick = function() {
+    mquant.style.display = "block";
+}
+tbquant.onclick = function() {
+    mquant.style.display = "block";
+}
+squant.onclick = function() {
+    mquant.style.display = "none";
+}
+
+var mfsftr = document.getElementById('FSFTRm');
+var bfsftr = document.getElementById("FSFTR");
+var tbfsftr = document.getElementById("TFSFTR");
+var sfsftr = document.getElementsByClassName("close")[4];
+bfsftr.onclick = function() {
+    mfsftr.style.display = "block";
+}
+tbfsftr.onclick = function() {
+    mfsftr.style.display = "block";
+}
+squant.onclick = function() {
+    mquant.style.display = "none";
+}
+
+var mseema = document.getElementById('SEEMAm');
+var bseema = document.getElementById("SEEMA");
+var tbseema = document.getElementById("TSEEMA");
+var sseema = document.getElementsByClassName("close")[5];
+bseema.onclick = function() {
+    mseema.style.display = "block";
+}
+tbseema.onclick = function() {
+    mseema.style.display = "block";
+}
+sseema.onclick = function() {
+    mseema.style.display = "none";
+}
+
+var mgraph = document.getElementById('GRAPHm');
+var bgraph = document.getElementById("GRAPH");
+var tbgraph = document.getElementById("TGRAPH");
+var sgraph = document.getElementsByClassName("close")[6];
+bgraph.onclick = function() {
+    mgraph.style.display = "block";
+}
+tbgraph.onclick = function() {
+    mgraph.style.display = "block";
+}
+sgraph.onclick = function() {
+    mgraph.style.display = "none";
+}
+
+var mdeele = document.getElementById('DEELEm');
+var bdeele = document.getElementById("DEELE");
+var tbdeele = document.getElementById("TDEELE");
+var sdeele = document.getElementsByClassName("close")[7];
+bdeele.onclick = function() {
+    mdeele.style.display = "block";
+}
+tbgraph.onclick = function() {
+    mdeele.style.display = "block";
+}
+sdeele.onclick = function() {
+    mdeele.style.display = "none";
+}
+
+var mianne = document.getElementById('IANNEm');
+var bianne = document.getElementById("IANNE");
+var tbianne = document.getElementById("TIANNE");
+var sianne = document.getElementsByClassName("close")[8];
+bianne.onclick = function() {
+    mianne.style.display = "block";
+}
+tbianne.onclick = function() {
+    mianne.style.display = "block";
+}
+sianne.onclick = function() {
+    mianne.style.display = "none";
+}
+
+var mdesin = document.getElementById('DESINm');
+var bdesin = document.getElementById("DESIN");
+var tbdesin = document.getElementById("TDESIN");
+var sdesin = document.getElementsByClassName("close")[9];
+bdesin.onclick = function() {
+    mdesin.style.display = "block";
+}
+tbdesin.onclick = function() {
+    mdesin.style.display = "block";
+}
+sdesin.onclick = function() {
+    mdesin.style.display = "none";
+}
+
+var msysme = document.getElementById('SYSMEm');
+var bsysme = document.getElementById("SYSME");
+var tbsysme = document.getElementById("TSYSME");
+var ssysme = document.getElementsByClassName("close")[10];
+bsysme.onclick = function() {
+    msysme.style.display = "block";
+}
+tbsysme.onclick = function() {
+    msysme.style.display = "block";
+}
+ssysme.onclick = function() {
+    msysme.style.display = "none";
+}
+
+var mthels = document.getElementById('THELSm');
+var bthels = document.getElementById("THELS");
+var tbthels = document.getElementById("TTHELS");
+var sthels = document.getElementsByClassName("close")[11];
+bthels.onclick = function() {
+    mthels.style.display = "block";
+}
+tbthels.onclick = function() {
+    mthels.style.display = "block";
+}
+sthels.onclick = function() {
+    mthels.style.display = "none";
+}
+
+var mturbo = document.getElementById('TURBOm');
+var bturbo = document.getElementById("TURBO");
+var tbturbo = document.getElementById("TTURBO");
+var sturbo = document.getElementsByClassName("close")[12];
+bturbo.onclick = function() {
+    mturbo.style.display = "block";
+}
+tbturbo.onclick = function() {
+    mturbo.style.display = "block";
+}
+sturbo.onclick = function() {
+    mturbo.style.display = "none";
+}
+
+var mmhero = document.getElementById('MHEROm');
+var bmhero = document.getElementById("MHERO");
+var tbmhero = document.getElementById("TMHERO");
+var smhero = document.getElementsByClassName("close")[13];
+bmhero.onclick = function() {
+    mmhero.style.display = "block";
+}
+tbmhero.onclick = function() {
+    mmhero.style.display = "block";
+}
+smhero.onclick = function() {
+    mmhero.style.display = "none";
+}
+
+var mipman = document.getElementById('IPMANm');
+var bipman = document.getElementById("IPMAN");
+var tbipman = document.getElementById("TIPMAN");
+var sipman = document.getElementsByClassName("close")[14];
+bipman.onclick = function() {
+    mipman.style.display = "block";
+}
+tbipman.onclick = function() {
+    mipman.style.display = "block";
+}
+sipman.onclick = function() {
+    mipman.style.display = "none";
+}
+
+var mph102 = document.getElementById('PH102m');
+var bph102 = document.getElementById("PH102");
+var tbph102 = document.getElementById("TPH102");
+var sph102 = document.getElementsByClassName("close")[15];
+bph102.onclick = function() {
+    mph102.style.display = "block";
+}
+tbph102.onclick = function() {
+    mph102.style.display = "block";
+}
+sph102.onclick = function() {
+    mph102.style.display = "none";
+}
+
+var mma102 = document.getElementById('MA102m');
+var bma102 = document.getElementById("MA102");
+var tbma102 = document.getElementById("TMA102");
+var sma102 = document.getElementsByClassName("close")[16];
+bma102.onclick = function() {
+    mma102.style.display = "block";
+}
+tbma102.onclick = function() {
+    mma102.style.display = "block";
+}
+sma102.onclick = function() {
+    mma102.style.display = "none";
+}
+
+var mph101 = document.getElementById('PH101m');
+var bph101 = document.getElementById("PH101");
+var tbph101 = document.getElementById("TPH101");
+var sph101 = document.getElementsByClassName("close")[17];
+bph101.onclick = function() {
+    mph101.style.display = "block";
+}
+tbph101.onclick = function() {
+    mph101.style.display = "block";
+}
+sph101.onclick = function() {
+    mph101.style.display = "none";
+}
+
+var mch101 = document.getElementById('CH101m');
+var bch101 = document.getElementById("CH101");
+var tbch101 = document.getElementById("CH101");
+var sch101 = document.getElementsByClassName("close")[18];
+bch101.onclick = function() {
+    mch101.style.display = "block";
+}
+tbch101.onclick = function() {
+    mch101.style.display = "block";
+}
+sch101.onclick = function() {
+    mch101.style.display = "none";
+}
+
+var mma101 = document.getElementById('MA101m');
+var bma101 = document.getElementById("MA101");
+var tbma101 = document.getElementById("MA101");
+var sma101 = document.getElementsByClassName("close")[19];
+bma101.onclick = function() {
+    mma101.style.display = "block";
+}
+tbma101.onclick = function() {
+    mma101.style.display = "block";
+}
+sma101.onclick = function() {
+    mma101.style.display = "none";
+}
+
+var mme206 = document.getElementById('ME206m');
+var bme206 = document.getElementById("ME206");
+var tbme206 = document.getElementById("TME206");
+var sme206 = document.getElementsByClassName("close")[20];
+bme206.onclick = function() {
+    mme206.style.display = "block";
+}
+tbme206.onclick = function() {
+    mme206.style.display = "block";
+}
+sme206.onclick = function() {
+    mme206.style.display = "none";
+}
+
+var mme201 = document.getElementById('ME201m');
+var bme201 = document.getElementById("ME201");
+var tbme201 = document.getElementById("TME201");
+var sme201 = document.getElementsByClassName("close")[21];
+bme201.onclick = function() {
+    mme201.style.display = "block";
+}
+tbme201.onclick = function() {
+    mme201.style.display = "block";
+}
+sme201.onclick = function() {
+    mme201.style.display = "none";
+}
+
+var mme203 = document.getElementById('ME203m');
+var bme203 = document.getElementById("ME203");
+var tbme203 = document.getElementById("TME203");
+var sme203 = document.getElementsByClassName("close")[22];
+bme203.onclick = function() {
+    mme203.style.display = "block";
+}
+tbme203.onclick = function() {
+    mme203.style.display = "block";
+}
+sme203.onclick = function() {
+    mme203.style.display = "none";
+}
+
+var mme111 = document.getElementById('ME111m');
+var bme111 = document.getElementById("ME111");
+var tbme111 = document.getElementById("TME111");
+var sme111 = document.getElementsByClassName("close")[23];
+bme111.onclick = function() {
+    mme111.style.display = "block";
+}
+tbme111.onclick = function() {
+    mme111.style.display = "block";
+}
+sme111.onclick = function() {
+    mme111.style.display = "none";
+}
+
+var mcs201 = document.getElementById('CS201m');
+var bcs201 = document.getElementById("CS201");
+var tbcs201 = document.getElementById("TCS201");
+var scs201 = document.getElementsByClassName("close")[24];
+bcs201.onclick = function() {
+    mcs201.style.display = "block";
+}
+tbcs201.onclick = function() {
+    mcs201.style.display = "block";
+}
+scs201.onclick = function() {
+    mcs201.style.display = "none";
+}
+
+var mcs102 = document.getElementById('CS102m');
+var bcs102 = document.getElementById("CS102");
+var tbcs102 = document.getElementById("TCS102");
+var scs102 = document.getElementsByClassName("close")[25];
+bcs102.onclick = function() {
+    mcs102.style.display = "block";
+}
+tbcs102.onclick = function() {
+    mcs102.style.display = "block";
+}
+scs102.onclick = function() {
+    mcs102.style.display = "none";
+}
+
+var mcs203 = document.getElementById('CS203m');
+var bcs203 = document.getElementById("CS203");
+var tbcs203 = document.getElementById("TCS203");
+var scs203 = document.getElementsByClassName("close")[26];
+bcs203.onclick = function() {
+    mcs203.style.display = "block";
+}
+tbcs203.onclick = function() {
+    mcs203.style.display = "block";
+}
+scs203.onclick = function() {
+    mcs203.style.display = "none";
+}
+
+var mcs211 = document.getElementById('CS211m');
+var bcs211 = document.getElementById("CS211");
+var tbcs211 = document.getElementById("TCS211");
+var scs211 = document.getElementsByClassName("close")[27];
+bcs211.onclick = function() {
+    mcs211.style.display = "block";
+}
+tbcs211.onclick = function() {
+    mcs211.style.display = "block";
+}
+scs211.onclick = function() {
+    mcs211.style.display = "none";
+}
+
+var mcs206 = document.getElementById('CS206m');
+var bcs206 = document.getElementById("CS206");
+var tbcs206 = document.getElementById("TCS206");
+var scs206 = document.getElementsByClassName("close")[28];
+bcs206.onclick = function() {
+    mcs206.style.display = "block";
+}
+tbcs206.onclick = function() {
+    mcs206.style.display = "block";
+}
+scs206.onclick = function() {
+    mcs206.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == mrobot) {
+        mrobot.style.display = "none";
+    }
+    if (event.target == malgeb) {
+        malgeb.style.display = "none";
+    }
+    if (event.target == mastro) {
+        mastro.style.display = "none";
+    }
+    if (event.target == mquant) {
+        mquant.style.display = "none";
+    }
+    if (event.target == mfsftr) {
+        mfsftr.style.display = "none";
+    }
+    if (event.target == mseema) {
+        mseema.style.display = "none";
+    }
+    if (event.target == mgraph) {
+        mgraph.style.display = "none";
+    }
+    if (event.target == mdeele) {
+        mdeele.style.display = "none";
+    }
+    if (event.target == mianne) {
+        mianne.style.display = "none";
+    }
+    if (event.target == mdesin) {
+        mdesin.style.display = "none";
+    }
+    if (event.target == msysme) {
+        msysme.style.display = "none";
+    }
+    if (event.target == mthels) {
+        mthels.style.display = "none";
+    }
+    if (event.target == mturbo) {
+        mturbo.style.display = "none";
+    }
+    if (event.target == mmhero) {
+        mmhero.style.display = "none";
+    }
+    if (event.target == mipman) {
+        mipman.style.display = "none";
+    }
+    if (event.target == mph102) {
+        mph102.style.display = "none";
+    }
+    if (event.target == mma102) {
+        mma102.style.display = "none";
+    }
+    if(event.target == mph101){
+   		mph101.style.display = "none";
+  	}
+  	if(event.target == mch101){
+    	mch101.style.display = "none";
+  	}
+  	if(event.target == mma101){
+    	mma101.style.display = "none";
+  	}
+  	if(event.target == mme206){
+    	mme206.style.display = "none";
+  	}
+  	if(event.target == mme201){
+    	mme201.style.display = "none";
+  	}
+  	if(event.target == mme203){
+    	mme203.style.display = "none";
+  	}
+  	if (event.target == mme111) {
+        mme111.style.display = "none";
+	}
+	if (event.target == mcs201) {
+        mcs201.style.display = "none";
+    }
+    if (event.target == mcs102) {
+        mcs102.style.display = "none";
+    }
+    if (event.target == mcs203) {
+        mcs203.style.display = "none";
+    }
+    if (event.target == mcs211) {
+        mcs211.style.display = "none";
+    }
+    if (event.target == mcs206) {
+        mcs206.style.display = "none";
+    }
+}
+</script>   
+</body>
+</html>
